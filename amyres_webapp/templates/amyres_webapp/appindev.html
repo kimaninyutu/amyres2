@@ -1,0 +1,69 @@
+<!-- amyres_webapp/templates/amyres_webapp/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AGReFIND</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1> <strong>AGReFIND: Bridging the Gap Between Agricultural Research and Farmers.</strong></h1>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %}">Background</a></li>
+                        <li><a href="{% url 'about' %}">What We Do</a></li>
+                        <li><a href="{% url 'team' %}">The Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'products' %}">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="#AGReFIND">AGReFIND</a></li>
+                        <li><a href="#Auditass">Auditass</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>                      
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %}">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Body Section -->
+        <div class="homepage">
+            <h1>We're Launching Soon!</h1>
+            <p>Our app is in development.Stay tuned for updates and thank you for your patience!</p>
+            <img src="{% static 'amyres_webapp/Images/App development.jpg' %}" alt="App Testing and Development">
+        </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
+    <footer>
+        <p>&copy; 2025 AMYRES : Research,Innovation and Consultancy. All Rights Reserved.</p>
+        <p>Phone: +254-796-544-7066 | Email: info@amyres.co.ke</p>
+    </footer>
+</body>
+</html>

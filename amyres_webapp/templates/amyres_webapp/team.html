@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Our Team</h1>
+               
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %} ">Home</a></li>
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %} ">Background</a></li>
+                        <li><a href="{% url 'about' %} ">What We Do</a></li>
+                        <li><a href="{% url 'team' %} ">The Team</a></li>
+                </ul>
+                </li>
+                <li><a href="{% url 'products' %}">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="#AGReFIND">AGReFIND</a></li>
+                        <li><a href="#Auditass">Auditass</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>  
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %} ">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body Section -->
+    <div class="homepage">
+    <!-- Team section-->
+    <div class="row bottom-row">
+        <div class="team-member">
+            <img src="{% static 'amyres_webapp/Images/Aoko.jpg' %}" alt="Team member 1" srcset="">
+            <h3>Agriculturalist </h3>
+            <h3>UI/UX Developer</h3>
+            <h4><strong>Aoko Pauline</strong></h4>
+            <p>Aoko collaborates with farmers to boost productivity through innovative, sustainable strategies while minimizing environmental impact.</p>
+            <p> She leverages this expertise to design intuitive digital solutions that address the unique challenges of targeted audiences, enhancing user engagement.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'amyres_webapp/Images/Joseph.png' %}" alt="Team member 2" srcset="">
+            <h3>Data scientist</h3>
+            <h3>GIS Specialist</h3>
+            <h4><strong>Joseph Onyango</strong></h4>
+            <p> With a background in natural resource management,Joseph leads our research data processing, transforming complex spatial and non-spatial datasets into actionable insights that guide field applications and resource management decisions.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'amyres_webapp/Images/Amisi.jpg' %}" alt="Team member 3" srcset="">
+            <h3>Statistical programmer</h3>
+            <h3>Biostatistician</h3>
+            <h4><strong>Amisi Pascal </strong></h4>
+            <p> Amisi oversees our research design and analysis by leveraging his experience in processing complex data,developing predictive models and identifying patterns to generate actionable industry-insights through summary statistics, visualizations and comprehensive reports.</p>
+        </div>     
+    </div>
+    </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script><!-- Link to external JavaScript file -->
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
+        <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+
+    </footer>
+
+</body>
+</html>

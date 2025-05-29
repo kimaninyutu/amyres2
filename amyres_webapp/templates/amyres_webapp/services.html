@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Services:Your Partner in Innovative Agricultural Research and Technology</h1>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+            <li><a href="{% url 'home' %} ">Home</a></li>
+                <li><a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %} ">Background</a></li>
+                        <li><a href="{% url 'about' %} ">What We Do</a></li>
+                        <li><a href="{% url 'team' %} ">The Team</a></li>
+                    </ul>
+               </li>
+               <li><a href="{% url 'products' %} ">Products</a>
+                <ul class="dropdown">
+                    <li><a href="#AGReFIND">AGReFIND</a></li>
+                    <li><a href="#Auditass">Auditass</a></li>
+                </ul>
+               </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>                       
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %} ">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %} ">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body Section -->
+    <div class="homepage">
+ 
+    <!-- Detailed Service Descriptions -->
+    <section id="field-trials" class="detailed-services">
+        <div class="service-detail">
+            <img src="{% static 'amyres_webapp/Images/field trials.jpg' %}" alt="Experimental Field Trials">
+            <div class="text">
+                <h3>Field Trials</h3>
+                <p>Our team identifies optimal experimental sites and manages them based on client requirements. From layout design to data collection, AMYRES AgTech handles all aspects to ensure precision and valuable insights.</p>
+                <p><strong>Coverage:</strong> Countrywide, Across all acroecological zones of Kenya.</p>
+                <p><strong>Value:</strong></p> 
+                    <ul>
+                        <li>Seamless research implementation as per regulatory standards and practices.</li>
+                        <li>Remarkable trial completion rates. </li>
+                        <li>Contextualized experimental sites.</li>
+                        <li> Participatory research.</li>
+                    </ul>
+                <a href="{% url 'servicerequest' 'Field Trials' %}" class="cta-button" data-service="Field Trials">Request Service</a>
+            </div>
+        </div>
+        
+
+        <div class="service-detail">
+            <img src="{% static 'amyres_webapp/Images/Market-Research.jpg' %}" alt="Market Research">
+            <div id="Market-research" class="text">
+                <h3>Market Research</h3>
+                <p>Gain a deep understanding of market demands and trends with our tailored market research services. From customer insights to competitive analysis, we equip you with essential knowledge.</p>
+                <p><strong>Value :</strong></p>
+                <ul>
+                    <li>Informed business strategy</li>
+                    <li>Risk mitigation</li>
+                    <li>Business growth</li>
+                    <li>Enhanced customer profiles</li>
+                </ul>
+                <a href="{% url 'servicerequest' 'Market Research' %}" class="cta-button" data-service="Market Research">Request Service</a>
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <img src="{% static 'amyres_webapp/Images/Literature review.png' %}" alt="Literature Reviewing" >
+            <div id="Literature-Reviewing" class="text">
+                <h3>Training Needs Assessment</h3>
+                <p><em>&quot;A systematic evaluation of competencies, performance gaps, and training requirements to ensure alignment with business goals.&quot;</em></p>
+                <p>AMYRES AgTech offers comprehensive training needs assessment to identify skill gaps and training needs to develop effective training programs that enhance performance and organizational productivity.</p>
+                <p><strong>Value :</strong></p>
+                <ul>
+                    <li>Credible knowledge foundation for strategic decision making. </li>
+                    <li>Identification of training/competency gaps</li>
+                    <li>Comprehensive training reports</li>
+                    <li>Market led training programs</li>
+                </ul>
+                <a href="{% url 'servicerequest' 'Literature Review' %}" class="cta-button" data-service="Literature Review">Request Service</a>
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <img src="{% static 'amyres_webapp/Images/Data analysis.jfif' %}"  alt="Agri-Data Analysis">
+            <div id="Agri-Data-Management" class="text">
+                <h3>Agri-Data management</h3>
+                <p><em>&quot;Transform agricultural data into insights.&quot;</em></p>
+                <p>With a specialized approach in agricultural data, AMYRES AgTech provides robust data analysis to guide informed decisions. Our team leverages advanced tools to transform raw data into actionable insights.</p>
+                <p><strong>Value :</strong></p>
+                <ul>
+                    <li>Data driven decion making</li>
+                    <li>Improved Efficiency</li>
+                    <li>Predictive insights</li>
+                    <li></li>
+                </ul>
+                <a href="{% url 'servicerequest' 'Data Analysis' %}" class="cta-button" data-service="Data Analysis">Request Service</a>
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <img src="{% static 'amyres_webapp/Images/App development.jpg' %}" alt="App Testing and Development">
+            <div id="app-development" class="text">
+                <h3>App Development and testing</h3>
+                <p><em>&quot;Bring your app to life with expert development and testing services.&quot;</em></p>
+                <p>From idea to reality, we help you create reliable and effective agricultural apps. Our services include both app testing and development, ensuring high-quality solutions that meet user needs.</p>
+                
+                <p><strong>Value :</strong></p>
+                <ul>
+                    <li>User centric solutions</li>
+                    <li>Reduced app-development time</li>
+                    <li>Innovative features</li>
+                    <li>Quality assurance</li>
+                </ul>
+                <a href="{% url 'servicerequest' 'App Development' %}" class="cta-button" data-service="App Development">Request Service</a>
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <img src="{% static 'amyres_webapp/Images/Feed efficiency.jpg' %}" alt="Feed Efficiency Trials">
+            <div id="Feed-efficiency" class="text">
+                <h3>Consultancy</h3>
+                <p><em>&quot;Your Research, Innovation and Development partner.&quot;</em></p>
+                <p>Enhancing agricultural productivity, sustainability, and innovation by providing research-driven solutions, technology adoption strategies, and policy recommendations that support agribusiness growth and food security.</p>
+                <p><strong>Value :</strong></p>
+                <ul>
+                    <li>Strengthened capacities/competencies</li>
+                    <li>Innovative tech solutions</li>
+                    <li>Policy and strategy development</li>
+                    <li>Analysis reports</li>
+                </ul>
+                <a href="{% url 'servicerequest' 'Feed Trials' %}" class="cta-button" data-service="Feed Trials">Request Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="FAQ" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What types of field trials do you offer?</h3>
+            <p>We offer various field trials tailored to client needs, including cultivar trials, efficacy trials, technology adoption trials, and pest management studies.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How does AMYRES AgTech handle data confidentiality in Agri-Data Analysis?</h3>
+            <p>We follow strict data security protocols and ensure that client data remains confidential throughout our analysis process.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can AMYRES AgTech provide customized market research?</h3>
+            <p>Yes, we offer tailored market research services to meet the specific needs of our clients, including competitor analysis, consumer insights, and market trend forecasting.</p>
+        </div>
+    </section>
+    </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script> <!-- Link to external JavaScript file -->
+        <!-- Footer Section -->
+        <footer>
+        <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
+        <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+
+        </footer>
+
+</body>
+</html>

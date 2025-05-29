@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Contact us</h1>
+               
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %} ">Home</a></li>
+                <li><a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %} ">Background</a></li>
+                        <li><a href="{% url 'about' %} ">What We Do</a></li>
+                        <li><a href="{% url 'team' %} ">The Team</a></li>
+                    </ul>
+               </li>
+               <li><a href="{% url 'products' %} ">Products</a>
+                <ul class="dropdown">
+                    <li><a href="#AGReFIND">AGReFIND</a></li>
+                    <li><a href="#Auditass">Auditass</a></li>
+                </ul>
+               </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %} ">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %} ">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body Section -->
+
+    <div class="homepage">
+
+        <!-- Section 1: Contact Us -->
+        <div class="section">
+            <p>Ready to take your agricultural business to the next level? Please reach out to us today!!!</p>
+            <p>Our experts are ready to provide you with personalized consulting and research-backed strategies for your farm or agribusiness.</p>
+            <a href="{% url 'contactform' %} " class="cta-button">Get in Touch</a>
+
+            <!-- Social Media Links with Icons -->
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><img src="{% static 'amyres_webapp/Images/Facebook.jfif' %}"alt="Facebook"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="{% static 'amyres_webapp/Images/X.png' %}" alt="Twitter"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="{% static 'amyres_webapp/Images/instagram.jfif' %}" alt="Instagram"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="{% static 'amyres_webapp/Images/Linkedin.png' %}" alt="LinkedIn"></a>
+                <a href="https://www.whatsapp.com" target="_blank"><img src="{% static 'amyres_webapp/Images/Whatsapp.jfif' %}" alt="Whatsapp"></a>
+            </div>
+        </div>
+ <!-- Client Testimonials -->
+ <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-carousel">
+        <div class="testimonial">
+            <p>"AMYRES AgTech provided exceptional insights that have transformed our farming practices. Their field trials and data analytics were exactly what we needed."</p>
+            <p><strong>- John Kunje, Agribusiness Owner</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"The literature review service gave us a solid foundation for our research. AMYRES AgTech made it easy to access the latest studies and insights."</p>
+            <p><strong>- Maria Kizia, Researcher</strong></p>
+        </div>
+        <!-- Additional testimonials can be added here -->
+    </div>
+</section>
+
+    </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script> <!-- Link to external JavaScript file -->
+    <!-- Footer Section -->
+    <footer>
+       <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
+       <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+    </footer>
+
+</body>
+</html>

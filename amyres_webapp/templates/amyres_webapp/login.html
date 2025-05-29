@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
+</head>
+    <header>
+        <h1>AMYRES AGTECH: Your Research and Development Partner</h1>
+        <p>"Empowering Farmers & Agribusinesses with Research-Driven Solutions for Sustainable Agriculture in Kenya."</p>
+    </header>
+<body>
+    <div class="homepage">
+
+            <img src="{% static 'amyres_webapp/Images/AGReFIND Icon.PNG' %}" alt="App Icon" class="product-icon" > <!-- Placeholder icon -->
+
+            <form action="{% url 'login' %}" method="post" > <!-- Adjust action URL as needed -->
+                {% csrf_token %}
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required placeholder="enter your username or email">
+                
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required placeholder="enter your password">
+
+                <button type="submit" class="cta-button">Login</button>
+            </form>
+
+            <!-- Additional options -->
+            <div class="extra-options">
+                <a href="{% url 'signup' %}" class="cta-button">Sign Up</a> <!-- Link to the signup page -->
+            </div>
+        </div>
+        <header>
+            <p> <strong>AGReFIND: Bridging the Gap Between Agricultural Research and Farmers.</strong></p>
+        </header>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
+    <footer>
+        <p>&copy; 2025 AMYRES AGTECH: Research, Innovation and Consultancy. All Rights Reserved.</p>
+        <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

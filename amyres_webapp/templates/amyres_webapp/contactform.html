@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get in Touch</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
+</head>
+    <header>
+        <h1>AMYRES: Your Research and Development Partner</h1>
+        <p>"Empowering Farmers & Agribusinesses with Research-Driven Solutions for Sustainable Agriculture in Kenya."</p>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %} ">Home</a></li>
+                <li><a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %} ">Background</a></li>
+                        <li><a href="{% url 'about' %} ">What We Do</a></li>
+                        <li><a href="{% url 'team' %} ">The Team</a></li>
+                    </ul>
+               </li>
+               <li><a href="{% url 'products' %}">Products</a>
+                <ul class="dropdown">
+                    <li><a href="#AGReFIND">AGReFIND</a></li>
+                    <li><a href="#Auditass">Auditass</a></li>
+                </ul>
+               </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>  >                       
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %} ">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>  
+    </header>
+<body>
+    <div class="homepage">
+
+        <form action="{% url 'contactform' %}" method="post">
+            {% csrf_token %} <!-- Include CSRF token for security -->
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+    
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+    
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+
+        </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
+    <footer>
+        <p>&copy; 2025 AMYRES AGTECH : Research,Innovation and Consultancy. All Rights Reserved.</p>
+        <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+    </footer>
+</body>
+</html>
+

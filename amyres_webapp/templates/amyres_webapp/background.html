@@ -1,0 +1,101 @@
+<!-- amyres_webapp/templates/amyres_webapp/background.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"><!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Background</h1>
+               
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %}">Background</a></li>
+                        <li><a href="{% url 'about' %}">What We Do</a></li>
+                        <li><a href="{% url 'team' %}">The Team</a></li>
+                </ul>
+                </li>
+                <li><a href="{% url 'products' %}">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="#AGReFIND">AGReFIND</a></li>
+                        <li><a href="#Auditass">Auditass</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>                       
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %}">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body Section -->
+    <div class="content">
+ 
+        <!-- History Section -->
+    <div class="column">
+        <h2>Our History</h2>
+        <p> AMYRES AgTech is a startup contract research,innovation and consultancy organization established in 2023 in response to the growing need for a dedicated research organization that could <strong>bridge the gap between scientific research and practical, field-based solutions for Kenyan farmers.</strong> </p>
+        <p>The founders, a team of experienced professionals in agricultural science, data science and statistical programming, recognized that while Kenya had a strong base of agricultural research, much of the knowledge was not being effectively transferred to farmers or adapted to local contexts.</p>
+        <p>This created an urgent need for an organization that could work directly with farmers, and collaborate with local and international partners to <strong>translate research findings into actionable insights.</strong></p>
+    </div>
+
+    <!-- Location Section with Google Maps Link -->
+    <div class="column">
+        <h2>Our Location</h2>
+        <p>Our office is located in Nyeri, Central region of Kenya, giving us access to the country’s leading research institutions, agribusiness hubs, and governmental bodies. </p>  
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.699613318311!2d36.97956397477642!3d-0.4419776995536805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182861e3fce0feb3%3A0x4c5d494ba5e19690!2sKenya%20School%20of%20Agriculture%2CNyeri-Wambugu%20Farm!5e0!3m2!1sen!2ske!4v1729251690706!5m2!1sen!2ske" 
+        width="450" height="250" style="border:0;" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+        </iframe>
+     
+    </div>
+    
+    <!-- Mission and Vision Section -->
+    <div class="column">
+        <h2>Mission</h2>
+        <p>At AMYRES AgTech, our mission is to enhance agricultural productivity and sustainability by making research-based knowledge and technologies accessible to every farmer, agribusiness, and stakeholder in Kenya.</p>
+        <p>We aim to drive positive transformation in farming practices, help businesses maximize yields, and support the development of climate-smart, resilient food systems. </p>
+        <h2>Vision</h2>
+        <p>To become the leading catalyst for sustainable agricultural innovation in Kenya, empowering farmers, agribusinesses, and communities through research-driven solutions that increase productivity, promote environmental sustainability, and enhance food security.</p>
+    </div>
+   
+</div>
+<script src="{% static 'mainapp/js/amyres.js' %}"></script><!-- Link to external JavaScript file -->
+    <!-- Footer Section -->
+    <footer>
+       <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
+       <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+    </footer>
+
+</body>
+</html>

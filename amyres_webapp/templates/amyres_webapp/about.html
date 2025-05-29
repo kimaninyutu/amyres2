@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"><!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>What We Do</h1>
+               
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %} ">Home</a></li>
+                <li>
+                    <a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %} ">Background</a></li>
+                        <li><a href="{% url 'about' %} ">What We Do</a></li>
+                        <li><a href="{% url 'team' %} ">The Team</a></li>
+                </ul>
+                </li>
+                <li><a href="{% url 'products' %}">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="#AGReFIND">AGReFIND</a></li>
+                        <li><a href="#Auditass">Auditass</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>                    
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %} ">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body Section -->
+    <div class="homepage">
+ 
+    <!-- Key activities section -->
+    <div class="row top-row">
+        <div class="left-column">
+            <h2>Agricultural Research and Technology development</h2>
+            <p>As a research-driven organization, AMYRES AgTech recognizes the critical role of research in value chain development within the agriculture sector.Research drives innovation, enhances efficiency, and creates sustainable solutions that benefit all stakeholders.</p>
+            <p>Given the challenges in agricultural data, AMYRES AgTech leverages cutting-edge technologies to deliver robust data and information management solutions. These include <strong>advanced farm management information systems (FMIS)</strong>, <strong>data analytics platforms powered by AI and machine learning </strong>, mobile farm advisory applications, <strong>blockchain-enabled market systems</strong>, and innovative Agri-finance technologies driven by <strong> fintech solutions </strong>.</p>
+            <p>In precision agriculture, the organization leverages technologies such as  <strong>remote sensing, drone and satellite imagery </strong>, <strong>GPS/auto-guided equipment</strong>, <strong>variable rate technology</strong>to optimize productivity through data driven deceision making at the farm.</p>
+        </div>
+        <div class="right-column">
+            <h2>Knowledge and technology transfer</h2>
+            <p>AMYRES AgTech is dedicated to ensuring that research findings/technologies are disseminated to farmers and other stakeholders.To enhance these efforts, AMYRES AgTech integrates digital solutions to increase productive efficiency,reduce resource waste, improve market access, and support sustainability. Our solutions empower farmers with real-time data and actionable insights, leading to better decision-making and improved profitability across the agricultural sector.</p>
+            <p>Therefore, AMYRES AgTech works directly with farmers and collaborates with local and international stakeholders like researchers/scientists, input providers, extension service providers by identifying and addressing challenges at every stage of the value chain—from production to market by fostering collaborative and participatory research initiatives.</p>
+        </div>
+    </div>
+</div>
+<script src="{% static 'amyres_webapp/js/amyres.js' %}"></script> <!-- Link to external JavaScript file -->
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
+    <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+</footer>
+
+</body>
+</html>

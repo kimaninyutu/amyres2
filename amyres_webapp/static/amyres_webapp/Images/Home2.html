@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center; /* Centers all text content */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #004aad; /* Blue */
+            color: white;
+            padding: 20px 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(126, 217, 87);
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: hsl(150, 23%, 5%); /* black */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Body Section */
+        .content {
+            padding: 40px;
+            background: linear-gradient(to right, #0097b2, #7ed957);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the body content */
+        }
+
+        .section {
+            margin-bottom: 40px;
+            max-width: 800px; /* To control text width */
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #f9fcf7; /* white */
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #090000; /* Black */
+        }
+
+        /* Scrollable container for images */
+        .image-gallery {
+            display: flex;
+            overflow-x: scroll;  /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent line breaks so images are side by side */
+            padding: 20px;
+            background-color: #f4f4f4;
+            max-width: 100%;
+        }
+
+        /* Styling for each image */
+        .image-gallery img {
+            max-width: 300px;   /* Limit image width */
+            height: auto;       /* Keep the aspect ratio */
+            margin-right: 10px; /* Add space between images */
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
+
+        /* Hide scrollbar in modern browsers (optional) */
+        .image-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Scrollbar customization for browsers that show it */
+        .image-gallery {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;     /* Firefox */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #0a0a0a; /* Black */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: rgb(126, 217, 87); /* green */
+        }
+
+        /* Button Style */
+        .cta-button {
+            display: inline-block;
+            background-color: #004aad; /* Blue */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #0097b2; /* Blue */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>AMYRES: Your Research and Development Partner</h1>
+        <p>"Empowering Farmers & Agribusinesses with Research-Driven Solutions for Sustainable Agriculture in Kenya."</p>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products & Services</a></li>
+                <li><a href="#">Impact</a></li>
+                <li><a href="#">News/Updates</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body Section -->
+    <div class="content">
+        <div class="image-gallery">
+            <!-- Add local images here -->
+            <img src="images/Nyeri-nursery.jpg" alt="Image 1">
+            <img src="images/image2.jpg" alt="Image 2">
+            <img src="images/image3.jpg" alt="Image 3">
+            <p>Transforming the agricultural landscape in Kenya through dissemination of Innovation and Research</p>            
+        </div>
+       
+        <!-- Section 1: Contact Us -->
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>Ready to take your agricultural business to the next level? Please reach out to us today!</p>
+            <p>Phone: +254-796-544-7066 | Email: info@amyres.co.ke</p>
+            <p>Our experts are ready to provide you with personalized consulting and research-backed strategies for your farm or agribusiness.</p>
+            <a href="#" class="cta-button">Get in Touch</a>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Agricultural Research and Consulting Company. All Rights Reserved.</p>
+        <p>Follow us on 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>, 
+            <a href="#">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+</html>
+

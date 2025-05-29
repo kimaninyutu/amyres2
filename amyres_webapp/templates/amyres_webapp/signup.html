@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
+</head>
+<header>
+    <h1>AMYRES AGTECH: Your Research and Development Partner</h1>
+    <p>"Empowering Farmers & Agribusinesses with Research-Driven Solutions for Sustainable Agriculture in Kenya."</p>
+</header>
+<body>
+    <div class="homepage">
+        
+        <h2>Create an Account</h2>
+        <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+    
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+    
+
+            <!-- Submit Button -->
+            <button type="submit" class="cta-button">Sign Up</button>
+        </form>
+
+        <!-- Redirect to Login -->
+        <div class="login-redirect">
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+        </div>
+    </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
+    <footer>
+        <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
+        <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+    </footer>
+</body>
+</html>
+

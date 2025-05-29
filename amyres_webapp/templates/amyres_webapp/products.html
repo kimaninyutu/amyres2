@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMYRES</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Products</h1> 
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %} ">Home</a></li>
+                <li><a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="{% url 'background' %} ">Background</a></li>
+                        <li><a href="{% url 'about' %} ">What We Do</a></li>
+                        <li><a href="{% url 'team' %} ">The Team</a></li>
+                    </ul>
+               </li>
+               <li><a href="{% url 'products' %} ">Products</a>
+                <ul class="dropdown">
+                    <li><a href="#AGReFIND">AGReFIND</a></li>
+                    <li><a href="#Auditass">Auditass</a></li>
+                </ul>
+               </li>
+                <li><a href="{% url 'services' %} ">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#field-trials">Field trials</a></li>
+                        <li><a href="#Market-research">Market research</a></li>
+                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
+                        <li><a href="#Agri-Data-Management">Data management</a></li> 
+                        <li><a href="#app-development">App development</a></li>
+                        <li><a href="#Feed-efficiency">Consultancy</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="{% url 'news' %} ">News/Updates</a>
+                    <ul class="dropdown">
+                        <li><a href="#Recent-projects">Projects& activities</a></li>
+                        <li><a href="#Featured-service">Featured service</a></li>
+                        <li><a href="#Industry-insights">Industry insights</a></li> 
+                     
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact' %} ">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- Login and Download Forms (Hidden) -->
+     <form id="loginForm" method="POST" action="{% url 'appindev' %}" style="display: none;">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+    </form>
+
+    <form id="downloadForm" method="POST" action="{% url 'download_file' %}" style="display: none;">
+        {% csrf_token %}
+        <input type="hidden" name="file_name" value="file1.zip">
+    </form>
+
+
+    <!-- Body Section -->
+    <div class="homepage">
+    
+        <!-- Products section-->
+    <div class="products-container">
+         <!-- Row 1 -->
+        <div class="row-products">
+            <!-- Column 1: Icon, link, and download button -->
+            <div class="column-products icon-section">
+                <img src="{% static 'amyres_webapp/Images/AGReFIND Icon.PNG' %}" alt="App Icon" class="product-icon" > <!-- Placeholder icon -->
+                <p> <strong>AGReFIND: Bridging the Gap Between Agricultural Research and Farmers.</strong></p>
+                <p>AGReFIND is an AI-powered mobile app that connects stakeholders to localized agricultural research, ensuring access to actionable, up-to-date information, driving the adoption of effective agricultural innovations.</p>
+                <p><strong>Target users</strong>: Smallholder farmers, Large scale farmers, researcers, NGOs, other agribusinesses.</p>
+                <p> <strong>Goal</strong>: Increase the adoption of agricultural research findings among smallholder farmers, commercial farmers, NGOs, and research institutions in Kenya.</p>
+                <button onclick="triggerLogin()" class="cta-button">Login</button>
+                <button onclick="downloadFile('file1.zip')" class="cta-button">Download</button>
+            </div>
+            <!-- Column 2: Carousel for App Features -->
+            <div class="column-products carousel-section">
+                <div class="carousel">
+                    <img src="{% static 'amyres_webapp/Images/1.png' %}" class="carousel-item" alt="Feature 1">
+                    <img src="{% static 'amyres_webapp/Images/2.png' %}" class="carousel-item" alt="Feature 2">
+                    <img src="{% static 'amyres_webapp/Images/3.png' %}" class="carousel-item" alt="Feature 3">
+                    <img src="{% static 'amyres_webapp/Images/4.png' %}" class="carousel-item" alt="Feature 4">
+                    <img src="{% static 'amyres_webapp/Images/5.png' %}" class="carousel-item" alt="Feature 5">
+                    <img src="{% static 'amyres_webapp/Images/6.png' %}" class="carousel-item" alt="Feature 6">
+                    <img src="{% static 'amyres_webapp/Images/7.png' %}" class="carousel-item" alt="Feature 7">
+                </div>
+                <button class="carousel-control left" onclick="moveCarousel(-1,0)">&#10094;</button>
+                <button class="carousel-control right" onclick="moveCarousel(1,0)">&#10095;</button>
+            </div>
+        </div>       
+    </div>
+    </div>
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script> <!-- Link to external JavaScript file -->
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
+            <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
+        </footer>
+
+</body>
+</html>
