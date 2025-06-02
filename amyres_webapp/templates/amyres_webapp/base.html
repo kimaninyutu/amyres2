@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}AMYRES{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Enhanced Header Section with Logo -->
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo on the left -->
+                <div class="logo-section">
+                    <img src="{% static 'amyres_webapp/images/amyres-logo.png' %}" alt="AMYRES AGTECH Logo" class="logo">
+                </div>
+
+                <!-- Header content on the right -->
+                <div class="header-content">
+                    <div class="header-text">
+                        <h1>{% block page_title %}AMYRES AGTECH: Your Research, Innovation and Development Partner{% endblock %}</h1>
+                        <p>{% block page_subtitle %}"Empowering Farmers & Agribusinesses with Research-Driven Solutions for Sustainable Agriculture in Kenya."{% endblock %}</p>
+                    </div>
+
+                    <!-- Navigation Menu -->
+                    <nav>
+                        <!-- Mobile menu toggle -->
+                        <div class="nav-toggle" id="navToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <ul class="nav-menu" id="navMenu">
+                            <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-info-circle"></i> About Us <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="{% url 'background' %}">Background</a></li>
+                                    <li><a href="{% url 'about' %}">What We Do</a></li>
+                                    <li><a href="{% url 'team' %}">The Team</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'products' %}"><i class="fas fa-box"></i> Products <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#AGReFIND">AGReFIND</a></li>
+                                    <li><a href="#Auditass">Auditass</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'services' %}"><i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#field-trials">Field trials</a></li>
+                                    <li><a href="#Market-research">Market research</a></li>
+                                    <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li>
+                                    <li><a href="#Agri-Data-Management">Data management</a></li>
+                                    <li><a href="#app-development">App development</a></li>
+                                    <li><a href="#Feed-efficiency">Consultancy</a></li>
+                                    <li><a href="#FAQ">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'news' %}"><i class="fas fa-newspaper"></i> News/Updates <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#Recent-projects">Projects & activities</a></li>
+                                    <li><a href="#Featured-service">Featured service</a></li>
+                                    <li><a href="#Industry-insights">Industry insights</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contact' %}"><i class="fas fa-phone"></i> Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Modern Enhanced Footer -->
+    <footer class="modern-footer" style="display: block !important; visibility: visible !important;">
+        <!-- Wave Animation -->
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="footer-content-wrapper">
+            <div class="container">
+                <!-- Main Footer Content -->
+                <div class="footer-main">
+                    <!-- Company Section -->
+                    <div class="company-section">
+                        <div class="footer-logo-section">
+                            <img src="{% static 'amyres_webapp/images/amyres-logo.png' %}" alt="AMYRES AGTECH Logo" class="footer-logo-img">
+                            <div class="footer-brand">
+                                <h3>AMYRES AGTECH</h3>
+                                <div class="footer-tagline">Research • Innovation • Consultancy</div>
+                            </div>
+                        </div>
+                        <p class="company-description">Leading agricultural innovation through research, technology, and sustainable practices. Empowering farmers and agribusinesses with data-driven solutions for a sustainable future.</p>
+
+                        <!-- Newsletter Section -->
+                        <div class="newsletter-section">
+                            <h4><i class="fas fa-envelope"></i> Stay Updated</h4>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                                <button type="submit" class="newsletter-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-section">
+                        <h4><i class="fas fa-link"></i> Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                            <li><a href="{% url 'about' %}"><i class="fas fa-info-circle"></i> About Us</a></li>
+                            <li><a href="{% url 'services' %}"><i class="fas fa-cogs"></i> Services</a></li>
+                            <li><a href="{% url 'products' %}"><i class="fas fa-box"></i> Products</a></li>
+                            <li><a href="{% url 'news' %}"><i class="fas fa-newspaper"></i> News</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="footer-section">
+                        <h4><i class="fas fa-tools"></i> Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#field-trials"><i class="fas fa-seedling"></i> Field Trials</a></li>
+                            <li><a href="#Market-research"><i class="fas fa-chart-line"></i> Market Research</a></li>
+                            <li><a href="#Agri-Data-Management"><i class="fas fa-database"></i> Data Management</a></li>
+                            <li><a href="#app-development"><i class="fas fa-mobile-alt"></i> App Development</a></li>
+                            <li><a href="#Feed-efficiency"><i class="fas fa-handshake"></i> Consultancy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="contact-section">
+                        <h4><i class="fas fa-phone"></i> Contact Info</h4>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="contact-label">Address</span>
+                                    <span class="contact-value">Nyeri, Kenya</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+254-769-125-073</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">info@amyres.co.ke</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-section">
+                            <h5>Follow Us</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="copyright">
+                            <p>&copy; 2025 AMYRES AGTECH. All Rights Reserved.</p>
+                            <p class="subtitle">Research • Innovation • Consultancy</p>
+                        </div>
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

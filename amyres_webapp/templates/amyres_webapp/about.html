@@ -1,85 +1,488 @@
+{% extends 'amyres_webapp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AMYRES</title>
-    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"><!-- Link to external CSS -->
-</head>
-<body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>What We Do</h1>
-               
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %} ">Home</a></li>
-                <li>
-                    <a href="#">About Us</a>
-                    <ul class="dropdown">
-                        <li><a href="{% url 'background' %} ">Background</a></li>
-                        <li><a href="{% url 'about' %} ">What We Do</a></li>
-                        <li><a href="{% url 'team' %} ">The Team</a></li>
-                </ul>
-                </li>
-                <li><a href="{% url 'products' %}">Products</a>
-                    <ul class="dropdown">
-                        <li><a href="#AGReFIND">AGReFIND</a></li>
-                        <li><a href="#Auditass">Auditass</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'services' %} ">Services</a>
-                    <ul class="dropdown">
-                        <li><a href="#field-trials">Field trials</a></li>
-                        <li><a href="#Market-research">Market research</a></li>
-                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
-                        <li><a href="#Agri-Data-Management">Data management</a></li> 
-                        <li><a href="#app-development">App development</a></li>
-                        <li><a href="#Feed-efficiency">Consultancy</a></li>
-                        <li><a href="#FAQ">FAQ</a></li>                    
-                    </ul>
-                </li>
-                <li><a href="{% url 'news' %} ">News/Updates</a>
-                    <ul class="dropdown">
-                        <li><a href="#Recent-projects">Projects& activities</a></li>
-                        <li><a href="#Featured-service">Featured service</a></li>
-                        <li><a href="#Industry-insights">Industry insights</a></li> 
-                     
-                    </ul>
-                </li>
-                <li><a href="{% url 'contact' %}">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block title %}AMYRES - About Us{% endblock %}
 
-    <!-- Body Section -->
-    <div class="homepage">
- 
-    <!-- Key activities section -->
-    <div class="row top-row">
-        <div class="left-column">
-            <h2>Agricultural Research and Technology development</h2>
-            <p>As a research-driven organization, AMYRES AgTech recognizes the critical role of research in value chain development within the agriculture sector.Research drives innovation, enhances efficiency, and creates sustainable solutions that benefit all stakeholders.</p>
-            <p>Given the challenges in agricultural data, AMYRES AgTech leverages cutting-edge technologies to deliver robust data and information management solutions. These include <strong>advanced farm management information systems (FMIS)</strong>, <strong>data analytics platforms powered by AI and machine learning </strong>, mobile farm advisory applications, <strong>blockchain-enabled market systems</strong>, and innovative Agri-finance technologies driven by <strong> fintech solutions </strong>.</p>
-            <p>In precision agriculture, the organization leverages technologies such as  <strong>remote sensing, drone and satellite imagery </strong>, <strong>GPS/auto-guided equipment</strong>, <strong>variable rate technology</strong>to optimize productivity through data driven deceision making at the farm.</p>
-        </div>
-        <div class="right-column">
-            <h2>Knowledge and technology transfer</h2>
-            <p>AMYRES AgTech is dedicated to ensuring that research findings/technologies are disseminated to farmers and other stakeholders.To enhance these efforts, AMYRES AgTech integrates digital solutions to increase productive efficiency,reduce resource waste, improve market access, and support sustainability. Our solutions empower farmers with real-time data and actionable insights, leading to better decision-making and improved profitability across the agricultural sector.</p>
-            <p>Therefore, AMYRES AgTech works directly with farmers and collaborates with local and international stakeholders like researchers/scientists, input providers, extension service providers by identifying and addressing challenges at every stage of the value chain—from production to market by fostering collaborative and participatory research initiatives.</p>
-        </div>
+{% block page_title %}About AMYRES AGTECH{% endblock %}
+{% block page_subtitle %}Your Research, Innovation and Development Partner{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <div class="about-page">
+        &lt;!-- Background Section -->
+        <section id="background" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Our Background</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>Our History</h3>
+                        <p>AMYRES AgTech is a startup contract research, innovation and consultancy organization established in 2023 in response to the growing need for a dedicated research organization that could <strong>bridge the gap between scientific research and practical, field-based solutions for Kenyan farmers.</strong></p>
+                        <p>The founders, a team of experienced professionals in agricultural science, data science and statistical programming, recognized that while Kenya had a strong base of agricultural research, much of the knowledge was not being effectively transferred to farmers or adapted to local contexts.</p>
+                        <p>This created an urgent need for an organization that could work directly with farmers, and collaborate with local and international partners to <strong>translate research findings into actionable insights.</strong></p>
+                    </div>
+                    <div class="location-content">
+                        <h3>Our Location</h3>
+                        <p>Our office is located in Nyeri, Central region of Kenya, giving us access to the country's leading research institutions, agribusiness hubs, and governmental bodies.</p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.699613318311!2d36.97956397477642!3d-0.4419776995536805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182861e3fce0feb3%3A0x4c5d494ba5e19690!2sKenya%20School%20of%20Agriculture%2CNyeri-Wambugu%20Farm!5e0!3m2!1sen!2ske!4v1729251690706!5m2!1sen!2ske" 
+                            width="100%" height="250" style="border:0; border-radius: 10px;" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        &lt;!-- What We Do Section -->
+        <section id="what-we-do" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-cogs"></i> What We Do</h2>
+            </div>
+            <div class="section-content">
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Agricultural Research and Technology Development</h3>
+                        <p>As a research-driven organization, AMYRES AgTech recognizes the critical role of research in value chain development within the agriculture sector. Research drives innovation, enhances efficiency, and creates sustainable solutions that benefit all stakeholders.</p>
+                        <p>Given the challenges in agricultural data, AMYRES AgTech leverages cutting-edge technologies to deliver robust data and information management solutions. These include <strong>advanced farm management information systems (FMIS)</strong>, <strong>data analytics platforms powered by AI and machine learning</strong>, mobile farm advisory applications, <strong>blockchain-enabled market systems</strong>, and innovative Agri-finance technologies driven by <strong>fintech solutions</strong>.</p>
+                        <p>In precision agriculture, the organization leverages technologies such as <strong>remote sensing, drone and satellite imagery</strong>, <strong>GPS/auto-guided equipment</strong>, <strong>variable rate technology</strong> to optimize productivity through data driven decision making at the farm.</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Knowledge and Technology Transfer</h3>
+                        <p>AMYRES AgTech is dedicated to ensuring that research findings/technologies are disseminated to farmers and other stakeholders. To enhance these efforts, AMYRES AgTech integrates digital solutions to increase productive efficiency, reduce resource waste, improve market access, and support sustainability. Our solutions empower farmers with real-time data and actionable insights, leading to better decision-making and improved profitability across the agricultural sector.</p>
+                        <p>Therefore, AMYRES AgTech works directly with farmers and collaborates with local and international stakeholders like researchers/scientists, input providers, extension service providers by identifying and addressing challenges at every stage of the value chain—from production to market by fostering collaborative and participatory research initiatives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        &lt;!-- Mission and Vision Section -->
+        <section id="mission-vision" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Mission & Vision</h2>
+            </div>
+            <div class="section-content">
+                <div class="mission-vision-grid">
+                    <div class="mission-card">
+                        <div class="card-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>At AMYRES AgTech, our mission is to enhance agricultural productivity and sustainability by making research-based knowledge and technologies accessible to every farmer, agribusiness, and stakeholder in Kenya.</p>
+                        <p>We aim to drive positive transformation in farming practices, help businesses maximize yields, and support the development of climate-smart, resilient food systems.</p>
+                    </div>
+                    <div class="vision-card">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To become the leading catalyst for sustainable agricultural innovation in Kenya, empowering farmers, agribusinesses, and communities through research-driven solutions that increase productivity, promote environmental sustainability, and enhance food security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        &lt;!-- Team Section -->
+        <section id="team" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Meet Our Team</h2>
+                <p>The experts driving agricultural innovation</p>
+            </div>
+            <div class="section-content">
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="{% static 'amyres_webapp/Images/Aoko.jpg' %}" alt="Aoko Pauline">
+                            <div class="member-overlay">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Aoko Pauline</h3>
+                            <div class="member-roles">
+                                <span class="role">Agriculturalist</span>
+                                <span class="role">UI/UX Developer</span>
+                            </div>
+                            <p>Aoko collaborates with farmers to boost productivity through innovative, sustainable strategies while minimizing environmental impact. She leverages this expertise to design intuitive digital solutions that address the unique challenges of targeted audiences, enhancing user engagement.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="{% static 'amyres_webapp/Images/Joseph.png' %}" alt="Joseph Onyango">
+                            <div class="member-overlay">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Joseph Onyango</h3>
+                            <div class="member-roles">
+                                <span class="role">Data Scientist</span>
+                                <span class="role">GIS Specialist</span>
+                            </div>
+                            <p>With a background in natural resource management, Joseph leads our research data processing, transforming complex spatial and non-spatial datasets into actionable insights that guide field applications and resource management decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="{% static 'amyres_webapp/Images/Amisi.jpg' %}" alt="Amisi Pascal">
+                            <div class="member-overlay">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Amisi Pascal</h3>
+                            <div class="member-roles">
+                                <span class="role">Statistical Programmer</span>
+                                <span class="role">Biostatistician</span>
+                            </div>
+                            <p>Amisi oversees our research design and analysis by leveraging his experience in processing complex data, developing predictive models and identifying patterns to generate actionable industry-insights through summary statistics, visualizations and comprehensive reports.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</div>
-<script src="{% static 'amyres_webapp/js/amyres.js' %}"></script> <!-- Link to external JavaScript file -->
-<!-- Footer Section -->
-<footer>
-    <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
-    <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
-</footer>
+</main>
+{% endblock %}
 
-</body>
-</html>
+{% block extra_css %}
+<style>
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to right, #0097b2, #7ed957);
+    min-height: calc(100vh - 200px);
+}
+
+.about-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #004aad;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.text-content h3,
+.location-content h3 {
+    color: #004aad;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-content p,
+.location-content p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.activity-card {
+    background: rgba(0, 74, 173, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    border-left: 4px solid #004aad;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 74, 173, 0.15);
+}
+
+.activity-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #004aad, #0097b2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.activity-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.activity-card h3 {
+    color: #004aad;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.activity-card p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.mission-card,
+.vision-card {
+    background: linear-gradient(135deg, rgba(0, 74, 173, 0.05), rgba(0, 151, 178, 0.05));
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 74, 173, 0.15);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #004aad, #0097b2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.card-icon i {
+    color: white;
+    font-size: 2rem;
+}
+
+.mission-card h3,
+.vision-card h3 {
+    color: #004aad;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mission-card p,
+.vision-card p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 74, 173, 0.1);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 74, 173, 0.3);
+}
+
+.member-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 74, 173, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.member-image:hover .member-overlay {
+    opacity: 1;
+}
+
+.member-overlay .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.member-overlay .social-links a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.member-overlay .social-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.member-info h3 {
+    color: #004aad;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.member-roles {
+    margin-bottom: 15px;
+}
+
+.role {
+    display: inline-block;
+    background: linear-gradient(45deg, #7ed957, #5cb85c);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    margin: 0 3px 3px 0;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.member-info p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 767.98px) {
+    .content-grid,
+    .activities-grid,
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .about-section {
+        padding: 25px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-page {
+        padding: 15px;
+    }
+    
+    .about-section {
+        padding: 20px;
+    }
+}
+</style>
+{% endblock %}

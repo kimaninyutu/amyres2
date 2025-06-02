@@ -1,55 +1,155 @@
+{% extends 'amyres_webapp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LOGIN</title>
-    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
-</head>
-    <header>
-        <h1>AMYRES AGTECH: Your Research and Development Partner</h1>
-        <p>"Empowering Farmers & Agribusinesses with Research-Driven Solutions for Sustainable Agriculture in Kenya."</p>
-    </header>
-<body>
+
+{% block title %}AMYRES - Login{% endblock %}
+
+{% block page_title %}AGReFIND Login{% endblock %}
+{% block page_subtitle %}Access your AGReFIND account{% endblock %}
+
+{% block content %}
+<main class="main-content">
     <div class="homepage">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <img src="{% static 'amyres_webapp/Images/AGReFIND Icon.PNG' %}" alt="AGReFIND App Icon" class="product-icon">
+                    <h2>Welcome Back</h2>
+                    <p><strong>AGReFIND: Bridging the Gap Between Agricultural Research and Farmers.</strong></p>
+                </div>
 
-            <img src="{% static 'amyres_webapp/Images/AGReFIND Icon.PNG' %}" alt="App Icon" class="product-icon" > <!-- Placeholder icon -->
+                <form action="{% url 'login' %}" method="post" class="login-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username or Email:</label>
+                        <input type="text" name="username" id="username" required placeholder="Enter your username or email">
+                    </div>
 
-            <form action="{% url 'login' %}" method="post" > <!-- Adjust action URL as needed -->
-                {% csrf_token %}
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" required placeholder="enter your username or email">
-                
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required placeholder="enter your password">
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" required placeholder="Enter your password">
+                    </div>
 
-                <button type="submit" class="cta-button">Login</button>
-            </form>
+                    <button type="submit" class="cta-button">Login</button>
+                </form>
 
-            <!-- Additional options -->
-            <div class="extra-options">
-                <a href="{% url 'signup' %}" class="cta-button">Sign Up</a> <!-- Link to the signup page -->
+                <div class="extra-options">
+                    <p>Don't have an account? <a href="{% url 'signup' %}" class="signup-link">Sign Up</a></p>
+                    <p><a href="#" class="forgot-password">Forgot Password?</a></p>
+                </div>
             </div>
         </div>
-        <header>
-            <p> <strong>AGReFIND: Bridging the Gap Between Agricultural Research and Farmers.</strong></p>
-        </header>
-    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
-    <footer>
-        <p>&copy; 2025 AMYRES AGTECH: Research, Innovation and Consultancy. All Rights Reserved.</p>
-        <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
-    </footer>
-</body>
-</html>
+    </div>
+</main>
+{% endblock %}
 
+{% block extra_css %}
+<style>
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+}
 
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
 
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
+.product-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
+.login-header h2 {
+    font-size: 1.8rem;
+    color: #004aad;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
 
+.login-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
 
+.login-form {
+    margin-bottom: 25px;
+}
 
+.form-group {
+    margin-bottom: 20px;
+}
 
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
 
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-group input:focus {
+    border-color: #004aad;
+    outline: none;
+}
+
+.extra-options {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #e1e5e9;
+}
+
+.extra-options p {
+    margin-bottom: 10px;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+}
+
+.signup-link, .forgot-password {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link:hover, .forgot-password:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 575.98px) {
+    .login-card {
+        padding: 25px;
+        margin: 10px;
+    }
+
+    .product-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+</style>
+{% endblock %}

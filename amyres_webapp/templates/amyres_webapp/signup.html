@@ -1,49 +1,50 @@
+{% extends 'amyres_webapp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
-</head>
-<header>
-    <h1>AMYRES AGTECH: Your Research and Development Partner</h1>
-    <p>"Empowering Farmers & Agribusinesses with Research-Driven Solutions for Sustainable Agriculture in Kenya."</p>
-</header>
-<body>
-    <div class="homepage">
-        
+
+{% block title %}AMYRES - Sign Up{% endblock %}
+
+{% block page_title %}Create Your Account{% endblock %}
+{% block page_subtitle %}Join AMYRES AGTECH and access our agricultural research solutions{% endblock %}
+
+{% block content %}
+<div class="homepage">
+    <div class="auth-container">
         <h2>Create an Account</h2>
-        <form method="POST" action="{% url 'signup' %}">
+        
+        <form method="POST" action="{% url 'signup' %}" class="auth-form">
             {% csrf_token %}
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email" required>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required>
+            </div>
 
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
     
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
     
-            <label for="confirm_password">Confirm Password:</label>
-            <input type="password" name="confirm_password" id="confirm_password" required>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
     
-
             <!-- Submit Button -->
-            <button type="submit" class="cta-button">Sign Up</button>
+            <div class="form-actions">
+                <button type="submit" class="cta-button">Sign Up</button>
+            </div>
         </form>
 
         <!-- Redirect to Login -->
-        <div class="login-redirect">
-            <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+        <div class="auth-options">
+            <p>Already have an account?</p>
+            <a href="{% url 'login' %}" class="cta-button secondary-button">Login here</a>
         </div>
     </div>
-    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
-    <footer>
-        <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
-        <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
-    </footer>
-</body>
-</html>
-
+</div>
+{% endblock %}

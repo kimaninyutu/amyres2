@@ -1,113 +1,537 @@
+{% extends 'amyres_webapp/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AMYRES</title>
-    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}"> <!-- Link to external CSS -->
-</head>
-<body>
+{% block title %}AMYRES - Products{% endblock %}
 
-    <!-- Header Section -->
-    <header>
-        <h1>Products</h1> 
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %} ">Home</a></li>
-                <li><a href="#">About Us</a>
-                    <ul class="dropdown">
-                        <li><a href="{% url 'background' %} ">Background</a></li>
-                        <li><a href="{% url 'about' %} ">What We Do</a></li>
-                        <li><a href="{% url 'team' %} ">The Team</a></li>
-                    </ul>
-               </li>
-               <li><a href="{% url 'products' %} ">Products</a>
-                <ul class="dropdown">
-                    <li><a href="#AGReFIND">AGReFIND</a></li>
-                    <li><a href="#Auditass">Auditass</a></li>
-                </ul>
-               </li>
-                <li><a href="{% url 'services' %} ">Services</a>
-                    <ul class="dropdown">
-                        <li><a href="#field-trials">Field trials</a></li>
-                        <li><a href="#Market-research">Market research</a></li>
-                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
-                        <li><a href="#Agri-Data-Management">Data management</a></li> 
-                        <li><a href="#app-development">App development</a></li>
-                        <li><a href="#Feed-efficiency">Consultancy</a></li>
-                        <li><a href="#FAQ">FAQ</a></li>                        
-                    </ul>
-                </li>
-                <li><a href="{% url 'news' %} ">News/Updates</a>
-                    <ul class="dropdown">
-                        <li><a href="#Recent-projects">Projects& activities</a></li>
-                        <li><a href="#Featured-service">Featured service</a></li>
-                        <li><a href="#Industry-insights">Industry insights</a></li> 
-                     
-                    </ul>
-                </li>
-                <li><a href="{% url 'contact' %} ">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block page_title %}Our Products{% endblock %}
+{% block page_subtitle %}Innovative Agricultural Technology Solutions{% endblock %}
 
-     <!-- Login and Download Forms (Hidden) -->
-     <form id="loginForm" method="POST" action="{% url 'appindev' %}" style="display: none;">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-    </form>
+{% block extra_css %}
+<style>
+.products-page {
+  background: linear-gradient(to right, #0097b2, #7ed957);
+  min-height: calc(100vh - 200px);
+  padding: 20px;
+}
+.products-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.intro-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.intro-content h2 {
+  color: #004aad;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.intro-content p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+.product-showcase {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+.product-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 74, 173, 0.1);
+}
+.product-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.product-title h2 {
+  color: #004aad;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+.product-tagline {
+  color: #666;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+}
+.product-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.product-description h3 {
+  color: #004aad;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.product-description > p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-family: 'Inter', sans-serif;
+}
+.product-details {
+  margin-bottom: 30px;
+}
+.detail-item {
+  background: rgba(0, 74, 173, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #004aad;
+}
+.detail-item h4 {
+  color: #004aad;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.detail-item ul {
+  list-style: none;
+  padding: 0;
+}
+.detail-item ul li {
+  color: #333;
+  padding: 5px 0;
+  position: relative;
+  padding-left: 20px;
+  font-family: 'Inter', sans-serif;
+}
+.detail-item ul li::before {
+  content: "✓";
+  color: #7ed957;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+.detail-item p {
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+.product-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.cta-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.cta-button.primary {
+  background: linear-gradient(45deg, #004aad, #0097b2);
+}
+.cta-button.secondary {
+  background: linear-gradient(45deg, #7ed957, #5cb85c);
+}
+.cta-button:hover {
+  opacity: 0.9;
+}
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel-item img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: contain;
+}
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.carousel-control.left {
+  left: 15px;
+}
+.carousel-control.right {
+  right: 15px;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.indicator.active {
+  background: white;
+}
+.features-section,
+.coming-soon-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+.section-header,
+.coming-soon-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.feature-card {
+  background: rgba(0, 74, 173, 0.05);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 74, 173, 0.15);
+  border-color: rgba(0, 74, 173, 0.2);
+}
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #004aad, #0097b2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.feature-icon i {
+  color: white;
+  font-size: 1.5rem;
+}
+.feature-card h3,
+.coming-soon-content h2 {
+  color: #004aad;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.feature-card p,
+.coming-soon-content > p {
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+.upcoming-products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.upcoming-product {
+  background: rgba(0, 74, 173, 0.05);
+  border-radius: 12px;
+  padding: 25px;
+  min-width: 200px;
+  border: 2px dashed rgba(0, 74, 173, 0.3);
+  text-align: center;
+}
+.product-placeholder {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 74, 173, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+.product-placeholder i {
+  color: #004aad;
+  font-size: 1.5rem;
+}
+.status-badge {
+  background: linear-gradient(45deg, #7ed957, #5cb85c);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 767.98px) {
+  .product-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .product-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .product-actions {
+    justify-content: center;
+  }
+  .carousel-item img {
+    height: auto;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 575.98px) {
+  .products-page {
+    padding: 15px;
+  }
+  .product-showcase,
+  .features-section,
+  .coming-soon-section {
+    padding: 25px;
+  }
+  .intro-content {
+    padding: 25px;
+  }
+}
+</style>
+{% endblock %}
 
-    <form id="downloadForm" method="POST" action="{% url 'download_file' %}" style="display: none;">
-        {% csrf_token %}
-        <input type="hidden" name="file_name" value="file1.zip">
-    </form>
+{% block content %}
+<form id="loginForm" method="POST" action="{% url 'appindev' %}" style="display: none;">
+    {% csrf_token %}
+    <input type="text" name="username" value="user" hidden>
+    <input type="password" name="password" value="secret" hidden>
+</form>
 
+<form id="downloadForm" method="POST" action="{% url 'download_file' %}" style="display: none;">
+    {% csrf_token %}
+    <input type="hidden" name="file_name" value="file1.zip">
+</form>
 
-    <!-- Body Section -->
-    <div class="homepage">
-    
-        <!-- Products section-->
-    <div class="products-container">
-         <!-- Row 1 -->
-        <div class="row-products">
-            <!-- Column 1: Icon, link, and download button -->
-            <div class="column-products icon-section">
-                <img src="{% static 'amyres_webapp/Images/AGReFIND Icon.PNG' %}" alt="App Icon" class="product-icon" > <!-- Placeholder icon -->
-                <p> <strong>AGReFIND: Bridging the Gap Between Agricultural Research and Farmers.</strong></p>
-                <p>AGReFIND is an AI-powered mobile app that connects stakeholders to localized agricultural research, ensuring access to actionable, up-to-date information, driving the adoption of effective agricultural innovations.</p>
-                <p><strong>Target users</strong>: Smallholder farmers, Large scale farmers, researcers, NGOs, other agribusinesses.</p>
-                <p> <strong>Goal</strong>: Increase the adoption of agricultural research findings among smallholder farmers, commercial farmers, NGOs, and research institutions in Kenya.</p>
-                <button onclick="triggerLogin()" class="cta-button">Login</button>
-                <button onclick="downloadFile('file1.zip')" class="cta-button">Download</button>
+<main class="main-content">
+    <div class="products-page">
+        <!-- Products Introduction -->
+        <section class="products-intro">
+            <div class="intro-content">
+                <h2>Transforming Agriculture Through Technology</h2>
+                <p>Discover our cutting-edge agricultural technology solutions designed to bridge the gap between research and practical farming applications.</p>
             </div>
-            <!-- Column 2: Carousel for App Features -->
-            <div class="column-products carousel-section">
-                <div class="carousel">
-                    <img src="{% static 'amyres_webapp/Images/1.png' %}" class="carousel-item" alt="Feature 1">
-                    <img src="{% static 'amyres_webapp/Images/2.png' %}" class="carousel-item" alt="Feature 2">
-                    <img src="{% static 'amyres_webapp/Images/3.png' %}" class="carousel-item" alt="Feature 3">
-                    <img src="{% static 'amyres_webapp/Images/4.png' %}" class="carousel-item" alt="Feature 4">
-                    <img src="{% static 'amyres_webapp/Images/5.png' %}" class="carousel-item" alt="Feature 5">
-                    <img src="{% static 'amyres_webapp/Images/6.png' %}" class="carousel-item" alt="Feature 6">
-                    <img src="{% static 'amyres_webapp/Images/7.png' %}" class="carousel-item" alt="Feature 7">
+        </section>
+
+        <!-- AGReFIND Product Section -->
+        <section class="product-showcase">
+            <div class="product-header">
+                <div class="product-logo">
+                    <img src="{% static 'amyres_webapp/Images/AGReFIND Icon.PNG' %}" alt="AGReFIND App Icon" class="product-icon">
                 </div>
-                <button class="carousel-control left" onclick="moveCarousel(-1,0)">&#10094;</button>
-                <button class="carousel-control right" onclick="moveCarousel(1,0)">&#10095;</button>
+                <div class="product-title">
+                    <h2>AGReFIND</h2>
+                    <p class="product-tagline">Bridging the Gap Between Agricultural Research and Farmers</p>
+                </div>
             </div>
-        </div>       
-    </div>
-    </div>
-    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script> <!-- Link to external JavaScript file -->
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2025 AMYRES AGTECH: Research,Innovation and Consultancy. All Rights Reserved.</p>
-            <p>Phone: +254-769-125-073 | Email: info@amyres.co.ke</p>
-        </footer>
 
-</body>
-</html>
+            <div class="product-content">
+                <div class="product-info">
+                    <div class="product-description">
+                        <h3>About AGReFIND</h3>
+                        <p>AGReFIND is an AI-powered mobile application that connects stakeholders to localized agricultural research, ensuring access to actionable, up-to-date information, driving the adoption of effective agricultural innovations.</p>
+
+                        <div class="product-details">
+                            <div class="detail-item">
+                                <h4><i class="fas fa-users"></i> Target Users</h4>
+                                <ul>
+                                    <li>Smallholder farmers</li>
+                                    <li>Large scale farmers</li>
+                                    <li>Researchers</li>
+                                    <li>NGOs</li>
+                                    <li>Other agribusinesses</li>
+                                </ul>
+                            </div>
+
+                            <div class="detail-item">
+                                <h4><i class="fas fa-bullseye"></i> Our Goal</h4>
+                                <p>Increase the adoption of agricultural research findings among smallholder farmers, commercial farmers, NGOs, and research institutions in Kenya.</p>
+                            </div>
+                        </div>
+
+                        <div class="product-actions">
+                            <button onclick="triggerLogin()" class="cta-button primary">
+                                <i class="fas fa-sign-in-alt"></i> Login to AGReFIND
+                            </button>
+                            <button onclick="triggerDownload()" class="cta-button secondary">
+                                <i class="fas fa-download"></i> Download App
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-showcase-carousel">
+                    <div class="carousel-header">
+                        <h3>App Features & Screenshots</h3>
+                        <p>Explore the powerful features of AGReFIND</p>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            {% for i in "1234567" %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                <img src="{% static 'amyres_webapp/Images/'|add:i|stringformat:'s'|add:'.png' %}" alt="AGReFIND Feature {{ i }}">
+                                <div class="carousel-caption">
+                                    <h4>Feature {{ i }}</h4>
+                                    <p>Description of feature {{ i }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-control left" onclick="moveCarousel(-1,0)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control right" onclick="moveCarousel(1,0)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="carousel-indicators">
+                            {% for i in "1234567" %}
+                            <span class="indicator {% if forloop.first %}active{% endif %}" onclick="currentSlide({{ forloop.counter }})"></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="features-section">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Discover what makes AGReFIND the perfect agricultural companion</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI-Powered Recommendations</h3>
+                    <p>Get personalized farming advice using advanced AI algorithms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-database"></i></div>
+                    <h3>Research Database</h3>
+                    <p>Access a wealth of agricultural studies and findings.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Location-Based Solutions</h3>
+                    <p>Receive recommendations based on your local conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Performance Analytics</h3>
+                    <p>Track progress and optimize your farming practices.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section class="coming-soon-section">
+            <div class="coming-soon-content">
+                <h2>More Products Coming Soon</h2>
+                <p>We're continuously developing new tech to serve farmers better.</p>
+                <div class="upcoming-products">
+                    <div class="upcoming-product">
+                        <div class="product-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Auditass</h3>
+                        <p>Agricultural audit and assessment platform</p>
+                        <span class="status-badge">In Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
+<script>
+let currentIndex = 0;
+const carousels = document.querySelectorAll('.carousel');
+const slideIntervals = [];
+
+carousels.forEach((carousel, carouselIndex) => {
+    const items = carousel.querySelectorAll('.carousel-item');
+    const indicators = carousel.parentElement.querySelectorAll('.indicator');
+
+    function showSlide(index) {
+        if (!items.length) return;
+        currentIndex = index;
+        items.forEach((item, i) => {
+            item.style.display = i === currentIndex ? 'block' : 'none';
+            if (indicators[i]) indicators[i].classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function nextSlide(step = 1) {
+        currentIndex = (currentIndex + step + items.length) % items.length;
+        showSlide(currentIndex);
+    }
+
+    // Manual controls
+    carousel.parentElement.querySelector('.carousel-control.left')?.addEventListener('click', () => nextSlide(-1));
+    carousel.parentElement.querySelector('.carousel-control.right')?.addEventListener('click', () => nextSlide(1));
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => showSlide(i));
+    });
+
+    // Auto-slide every 5 seconds
+    showSlide(0);
+    slideIntervals.push(setInterval(() => nextSlide(1), 5000));
+});
+</script>
+{% endblock %}

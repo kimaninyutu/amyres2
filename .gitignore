@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Django Migrations
+**/migrations/
+!*/migrations/__init__.py
+
+# PyCharm
+.idea/
+*.iml
+
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+
+# Test / Lint
+*.cover
+*.py,cover
+.noseids
+.cache
+pytest_cache/
+coverage.xml
+*.mo
+
+# Node modules (if using npm/yarn for frontend)
+node_modules/
+
+# VS Code (if some devs use it too)
+.vscode/
+
+# SASS / LESS cache
+.sass-cache/
+*.css.map
