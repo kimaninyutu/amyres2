@@ -6,37 +6,565 @@
 {% block page_title %}Contact us{% endblock %}
 
 {% block content %}
-<!-- Body Section -->
-<div class="homepage">
-    <!-- Section 1: Contact Us -->
-    <div class="section">
-        <p>Ready to take your agricultural business to the next level? Please reach out to us today!!!</p>
-        <p>Our experts are ready to provide you with personalized consulting and research-backed strategies for your farm or agribusiness.</p>
-        <a href="{% url 'contactform' %}" class="cta-button">Get in Touch</a>
+<main class="main-content">
+    <div class="contact-page">
+        <!-- Contact Introduction -->
+        <section class="contact-intro">
+            <div class="intro-content">
+                <h2>Get in Touch</h2>
+                <p>Ready to take your agricultural business to the next level? Please reach out to us today!</p>
+                <p>Our experts are ready to provide you with personalized consulting and research-backed strategies for your farm or agribusiness.</p>
+                <a href="{% url 'contactform' %}" class="cta-button">Contact Us Now</a>
+            </div>
+        </section>
 
-        <!-- Social Media Links with Icons -->
-        <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank"><img src="{% static 'amyres_webapp/Images/Facebook.jfif' %}" alt="Facebook"></a>
-            <a href="https://www.twitter.com" target="_blank"><img src="{% static 'amyres_webapp/Images/X.png' %}" alt="Twitter"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="{% static 'amyres_webapp/Images/instagram.jfif' %}" alt="Instagram"></a>
-            <a href="https://www.linkedin.com" target="_blank"><img src="{% static 'amyres_webapp/Images/Linkedin.png' %}" alt="LinkedIn"></a>
-            <a href="https://www.whatsapp.com" target="_blank"><img src="{% static 'amyres_webapp/Images/Whatsapp.jfif' %}" alt="Whatsapp"></a>
-        </div>
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+254-769-125-073</p>
+                    <span class="contact-time">Mon - Fri, 8AM - 6PM</span>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@amyres.co.ke</p>
+                    <span class="contact-time">We respond within 24 hours</span>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Nyeri, Central Kenya</p>
+                    <span class="contact-time">By appointment only</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media-section">
+            <div class="social-content">
+                <h2>Connect With Us</h2>
+                <p>Follow us on social media for the latest updates, agricultural insights, and research findings.</p>
+
+                <div class="social-media-grid">
+                    <a href="https://www.facebook.com" target="_blank" class="social-media-card facebook">
+                        <div class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>Facebook</h3>
+                            <p>Follow our page for updates</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.twitter.com" target="_blank" class="social-media-card twitter">
+                        <div class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>Twitter</h3>
+                            <p>Get real-time updates</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com" target="_blank" class="social-media-card instagram">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>Instagram</h3>
+                            <p>See our work in action</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com" target="_blank" class="social-media-card linkedin">
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>LinkedIn</h3>
+                            <p>Professional networking</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.whatsapp.com" target="_blank" class="social-media-card whatsapp">
+                        <div class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>WhatsApp</h3>
+                            <p>Quick messaging</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials -->
+        <section class="testimonials-section">
+            <div class="testimonials-content">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonial-carousel">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"AMYRES AgTech provided exceptional insights that have transformed our farming practices. Their field trials and data analytics were exactly what we needed."</p>
+                            <div class="testimonial-author">
+                                <strong>John Kunje</strong>
+                                <span>Agribusiness Owner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"The literature review service gave us a solid foundation for our research. AMYRES AgTech made it easy to access the latest studies and insights."</p>
+                            <div class="testimonial-author">
+                                <strong>Maria Kizia</strong>
+                                <span>Researcher</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls">
+                    <button onclick="prevTestimonial()" class="testimonial-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextTestimonial()" class="testimonial-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
     </div>
+</main>
+{% endblock %}
 
-    <!-- Client Testimonials -->
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-carousel">
-            <div class="testimonial">
-                <p>"AMYRES AgTech provided exceptional insights that have transformed our farming practices. Their field trials and data analytics were exactly what we needed."</p>
-                <p><strong>- John Kunje, Agribusiness Owner</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"The literature review service gave us a solid foundation for our research. AMYRES AgTech made it easy to access the latest studies and insights."</p>
-                <p><strong>- Maria Kizia, Researcher</strong></p>
-            </div>
-        </div>
-    </section>
-</div>
+{% block extra_css %}
+<style>
+.contact-page {
+    background: linear-gradient(to right, #0097b2, #7ed957);
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content h2 {
+    color: #004aad;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-methods {
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #004aad, #0097b2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.contact-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact-card h3 {
+    color: #004aad;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-card p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-time {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-family: 'Inter', sans-serif;
+}
+
+.social-media-section {
+    margin-bottom: 40px;
+}
+
+.social-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.social-content h2 {
+    color: #004aad;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social-content > p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.social-media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.social-media-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-media-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-media-card.facebook {
+    background: rgba(59, 89, 152, 0.1);
+    border-color: rgba(59, 89, 152, 0.2);
+}
+
+.social-media-card.facebook:hover {
+    background: rgba(59, 89, 152, 0.15);
+}
+
+.social-media-card.twitter {
+    background: rgba(29, 161, 242, 0.1);
+    border-color: rgba(29, 161, 242, 0.2);
+}
+
+.social-media-card.twitter:hover {
+    background: rgba(29, 161, 242, 0.15);
+}
+
+.social-media-card.instagram {
+    background: rgba(228, 64, 95, 0.1);
+    border-color: rgba(228, 64, 95, 0.2);
+}
+
+.social-media-card.instagram:hover {
+    background: rgba(228, 64, 95, 0.15);
+}
+
+.social-media-card.linkedin {
+    background: rgba(0, 119, 181, 0.1);
+    border-color: rgba(0, 119, 181, 0.2);
+}
+
+.social-media-card.linkedin:hover {
+    background: rgba(0, 119, 181, 0.15);
+}
+
+.social-media-card.whatsapp {
+    background: rgba(37, 211, 102, 0.1);
+    border-color: rgba(37, 211, 102, 0.2);
+}
+
+.social-media-card.whatsapp:hover {
+    background: rgba(37, 211, 102, 0.15);
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.social-media-card.facebook .social-icon {
+    background: #3b5998;
+}
+
+.social-media-card.twitter .social-icon {
+    background: #1da1f2;
+}
+
+.social-media-card.instagram .social-icon {
+    background: linear-gradient(45deg, #e4405f, #833ab4);
+}
+
+.social-media-card.linkedin .social-icon {
+    background: #0077b5;
+}
+
+.social-media-card.whatsapp .social-icon {
+    background: #25d366;
+}
+
+.social-icon i {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.social-info h3 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 3px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social-info p {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.testimonials-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonials-content h2 {
+    color: #004aad;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonial-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.testimonial {
+    display: none;
+    padding: 30px;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial-content {
+    background: rgba(0, 74, 173, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    background: #004aad;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-icon i {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.testimonial-content p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-family: 'Inter', sans-serif;
+}
+
+.testimonial-author strong {
+    color: #004aad;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonial-author span {
+    color: #666;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.testimonial-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(45deg, #004aad, #0097b2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+}
+
+@media (max-width: 767.98px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-media-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .social-media-card {
+        justify-content: flex-start;
+        padding: 12px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-icon i {
+        font-size: 0.8rem;
+    }
+
+    .social-info h3 {
+        font-size: 0.95rem;
+    }
+
+    .social-info p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-page {
+        padding: 15px;
+    }
+
+    .intro-content,
+    .social-content,
+    .testimonials-section {
+        padding: 25px;
+    }
+
+    .contact-card {
+        padding: 25px;
+    }
+
+    .social-media-card {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .social-icon i {
+        font-size: 0.75rem;
+    }
+}
+</style>
 {% endblock %}

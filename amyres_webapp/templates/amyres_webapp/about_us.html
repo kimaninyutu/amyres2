@@ -1,0 +1,768 @@
+{% extends 'amyres_webapp/base.html' %}
+{% load static %}
+
+{% block title %}AMYRES - About Us{% endblock %}
+
+{% block page_title %}About AMYRES AGTECH{% endblock %}
+{% block page_subtitle %}Powering insightful innovations for sustainable agriculture{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <div class="about-us-page">
+        <!-- Background/History Section -->
+        <section id="background" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Our Background</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>Our History</h3>
+                        <p>Amyres Agtech is an agritech research and innovation organization established in 2023 in response to the growing need for a dedicated research organization that could <strong>bridge the gap between scientific research and practical, field-based solutions for Kenyan farmers.</strong></p>
+                        <p>The founders, a team of experienced professionals in agricultural science, data science and statistical programming, recognized that while Kenya had a strong base of agricultural research, much of the knowledge was not being effectively transferred to farmers or adapted to local contexts.</p>
+                        <p>This created an urgent need for an organization that could work directly with farmers/growers and collaborate with local and international partners to <strong>translate research findings into actionable insights.</strong></p>
+                        <p>We are committed to transforming agriculture through research, data and technology.</p>
+                    </div>
+                    <div class="location-content">
+                        <h3>Our Location</h3>
+                        <p>Our office is located in Nyeri, Central region of Kenya, giving us access to the country's leading research institutions, agribusiness hubs, and governmental bodies.</p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.699613318311!2d36.97956397477642!3d-0.4419776995536805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182861e3fce0feb3%3A0x4c5d494ba5e19690!2sKenya%20School%20of%20Agriculture%2CNyeri-Wambugu%20Farm!5e0!3m2!1sen!2ske!4v1729251690706!5m2!1sen!2ske" 
+                            width="100%" height="250" style="border:0; border-radius: 10px;" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+            </div>
+            <div class="section-content">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <p class="mission-statement">To accelerate the adoption of sustainable agricultural innovations by integrating research, digital solutions and data intelligence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section id="what-we-do" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-cogs"></i> What We Do</h2>
+            </div>
+            <div class="section-content">
+                <div class="activities-grid">
+                    <!-- Research and Innovation -->
+                    <div id="research" class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Research and Innovation</h3>
+                        <p>We design and implement scientifically rigorous field trials to evaluate the performance of agro-inputs and post-harvest solutions. These trials not only generate high-quality data for regulatory registration but also provide insights that support farmer adoption and effective product positioning for agri-input companies and development partners.</p>
+                        <p>Our research spans the entire agricultural value chain, addressing key issues such as input efficiency, crop and soil health, climate resilience, and post-harvest management. We work closely with farmers, agribusinesses, and stakeholders to ensure that our findings are actionable and context-specific.</p>
+                        <div class="service-list">
+                            <h4>Our Research Services:</h4>
+                            <ul>
+                                <li>Field trial design and management</li>
+                                <li>Agronomic evaluations</li>
+                                <li>Impact assessments</li>
+                                <li>Evidence-based recommendations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech Development -->
+                    <div id="tech" class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Tech Development</h3>
+                        <p>To complement our research, AMYRES AgTech develops and deploys contemporary digital technologies that promote sustainable and inclusive agriculture. Our digital innovation arm focuses on designing solutions that are co-created with end users and tailored for the realities of farming in Kenya and the region.</p>
+                        <p>Through these solutions, we aim to modernize farming practices, enhance productivity, and make data-driven agriculture accessible and actionable for farmers at every scale.</p>
+                        <div class="service-list">
+                            <h4>Our Digital Product Suite:</h4>
+                            <ul>
+                                <li>AI-powered decision support tools for crop diagnostics, yield forecasting, and climate-smart advisory</li>
+                                <li>Farm Management Information Systems (FMIS) that help farmers and agribusinesses plan, track, and report farm operations more efficiently</li>
+                                <li>Mobile farm advisory applications that deliver localized, real-time guidance on agronomic practices, pest alerts, and market prices</li>
+                                <li>AI-driven chatbots, including WhatsApp-based assistants, that provide farmers with instant, 24/7 access to expert knowledge and support</li>
+                                <li>Blockchain-backed market platforms that improve traceability, trust, and transparency across agricultural value chains</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Agri-Data Management -->
+                    <div id="data" class="activity-card">
+                        <div class="activity-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Agri-Data Management</h3>
+                        <p>At AMYRES AgTech, effective management of agricultural data is a core function that supports our research and digital innovation initiatives. We provide comprehensive agri-data management solutions designed to collect, store, analyze, and visualize complex datasets from farms, value chains, and markets.</p>
+                        <p>Our services include the design and deployment of robust data infrastructure such as cloud-based databases and integrated platforms that ensure data integrity, security, and easy access. We apply advanced data analytics and machine learning to generate actionable insights for smarter decision-making across the agricultural ecosystem.</p>
+                        <div class="service-list">
+                            <h4>Key Offerings:</h4>
+                            <ul>
+                                <li>Custom mobile data collection apps optimized for field conditions, enabling seamless gathering of agronomic, environmental, and market data</li>
+                                <li>Centralized data warehouses that unify diverse data sources—ranging from satellite imagery to farm inputs—for comprehensive analysis</li>
+                                <li>Interactive real-time dashboards built on platforms like Power BI and Tableau to monitor crop health, weather conditions, supply chains, and market dynamics</li>
+                                <li>Predictive analytics models that forecast yields, detect pest and disease outbreaks, and anticipate market demand</li>
+                                <li>Implementation of API-enabled data sharing systems that promote interoperability and collaboration among farmers, researchers, extension agents, and policymakers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="about-section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Meet Our Team</h2>
+                <p>The experts driving agricultural innovation</p>
+            </div>
+            <div class="section-content">
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="{% static 'amyres_webapp/Images/Aoko.jpg' %}" alt="Aoko Pauline">
+                            <div class="member-overlay">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Aoko Pauline</h3>
+                            <div class="member-roles">
+                                <span class="role">Agriculturalist</span>
+                                <span class="role">UI/UX Developer</span>
+                            </div>
+                            <p>Aoko collaborates with farmers to boost productivity through innovative, sustainable strategies while minimizing environmental impact. She leverages this expertise to design intuitive digital solutions that address the unique challenges of targeted audiences, enhancing user engagement.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="{% static 'amyres_webapp/Images/Joseph.png' %}" alt="Joseph Onyango">
+                            <div class="member-overlay">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Joseph Onyango</h3>
+                            <div class="member-roles">
+                                <span class="role">Data Scientist</span>
+                                <span class="role">GIS Specialist</span>
+                            </div>
+                            <p>With a background in natural resource management, Joseph leads our research data processing, transforming complex spatial and non-spatial datasets into actionable insights that guide field applications and resource management decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="{% static 'amyres_webapp/Images/Amisi.jpg' %}" alt="Amisi Pascal">
+                            <div class="member-overlay">
+                                <div class="social-links">
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Amisi Pascal</h3>
+                            <div class="member-roles">
+                                <span class="role">Statistical Programmer</span>
+                                <span class="role">Biostatistician</span>
+                            </div>
+                            <p>Amisi oversees our research design and analysis by leveraging his experience in processing complex data, developing predictive models and identifying patterns to generate actionable industry-insights through summary statistics, visualizations and comprehensive reports.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Transform Agriculture?</h2>
+                <p>Partner with us to drive innovation and sustainable solutions in the agricultural sector.</p>
+                <div class="cta-buttons">
+                    <a href="{% url 'services' %}" class="cta-button primary">Explore Our Services</a>
+                    <a href="{% url 'contact' %}" class="cta-button secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.about-us-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: clamp(30px, 5vw, 50px);
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    scroll-margin-top: 100px; /* For smooth scrolling to sections */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.section-header h2 {
+    color: #004aad;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-family: 'Inter', sans-serif;
+}
+
+.section-header h2 i {
+    color: #7ed957;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 5vw, 40px);
+    align-items: start;
+}
+
+.text-content h3,
+.location-content h3 {
+    color: #004aad;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-content p,
+.location-content p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.mission-card {
+    background: linear-gradient(135deg, rgba(0, 74, 173, 0.05), rgba(126, 217, 87, 0.05));
+    border-radius: 15px;
+    padding: clamp(30px, 5vw, 50px);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(126, 217, 87, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 74, 173, 0.1);
+    border-color: rgba(126, 217, 87, 0.3);
+}
+
+.mission-icon {
+    width: clamp(80px, 10vw, 100px);
+    height: clamp(80px, 10vw, 100px);
+    background: linear-gradient(45deg, #004aad, #0097b2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 10px 25px rgba(0, 74, 173, 0.2);
+}
+
+.mission-icon i {
+    color: white;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.mission-statement {
+    color: #333;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Activities Grid */
+.activities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(25px, 5vw, 40px);
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: clamp(25px, 5vw, 35px);
+    transition: all 0.3s ease;
+    border-left: 5px solid #004aad;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 100px; /* For smooth scrolling to subsections */
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.activity-icon {
+    width: clamp(60px, 8vw, 80px);
+    height: clamp(60px, 8vw, 80px);
+    background: linear-gradient(45deg, #004aad, #0097b2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activity-icon i {
+    color: white;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.activity-card h3 {
+    color: #004aad;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.activity-card p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.service-list {
+    background: rgba(0, 74, 173, 0.05);
+    border-radius: 10px;
+    padding: clamp(15px, 3vw, 25px);
+    margin-top: 20px;
+}
+
+.service-list h4 {
+    color: #004aad;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list ul li {
+    color: #333;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.service-list ul li::before {
+    content: "✓";
+    color: #7ed957;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(20px, 4vw, 30px);
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: clamp(20px, 4vw, 30px);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 74, 173, 0.1);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 74, 173, 0.2);
+}
+
+.member-image {
+    position: relative;
+    width: clamp(120px, 15vw, 150px);
+    height: clamp(120px, 15vw, 150px);
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 74, 173, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.member-image:hover .member-overlay {
+    opacity: 1;
+}
+
+.member-overlay .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.member-overlay .social-links a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.member-overlay .social-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.member-info h3 {
+    color: #004aad;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.member-roles {
+    margin-bottom: 15px;
+}
+
+.role {
+    display: inline-block;
+    background: linear-gradient(45deg, #7ed957, #5cb85c);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    margin: 0 3px 5px 0;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.member-info p {
+    color: #666;
+    line-height: 1.6;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #004aad, #0097b2);
+    border-radius: 15px;
+    padding: clamp(30px, 5vw, 50px);
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .cta-button {
+    min-width: clamp(150px, 20vw, 200px);
+    margin-top: 0;
+}
+
+.cta-buttons .primary {
+    background: linear-gradient(45deg, #7ed957, #5cb85c);
+}
+
+.cta-buttons .secondary {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+}
+
+.cta-buttons .secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .map-container {
+        max-width: 600px;
+        margin: 20px auto 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-section {
+        padding: 25px;
+        scroll-margin-top: 80px;
+    }
+    
+    .activity-card {
+        scroll-margin-top: 80px;
+    }
+    
+    .mission-card {
+        padding: 25px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .cta-section {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-us-page {
+        padding: 15px;
+    }
+    
+    .about-section {
+        padding: 20px;
+        scroll-margin-top: 70px;
+    }
+    
+    .activity-card {
+        padding: 20px;
+        scroll-margin-top: 70px;
+    }
+    
+    .service-list {
+        padding: 15px;
+    }
+    
+    .mission-card {
+        padding: 20px;
+    }
+    
+    .mission-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .mission-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .cta-section {
+        padding: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .cta-buttons .cta-button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Animation for sections */
+.about-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for activity cards */
+.activity-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.activity-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.activity-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.activity-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.activity-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe all sections and activity cards
+    document.querySelectorAll('.about-section, .activity-card').forEach(section => {
+        observer.observe(section);
+    });
+    
+    // Handle navigation dropdown clicks
+    const aboutUsLinks = document.querySelectorAll('a[href^="#"]');
+    aboutUsLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Only prevent default if it's an anchor link
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const navMenu = document.querySelector('.nav-menu');
+                    if (navMenu && navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        const navToggle = document.querySelector('.nav-toggle');
+                        if (navToggle) navToggle.classList.remove('active');
+                    }
+                    
+                    // Scroll to the target element
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

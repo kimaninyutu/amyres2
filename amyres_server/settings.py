@@ -29,7 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['.amyres.com', '167.71.50.114', '127.0.0.1', 'localhost']
 
 
-
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, "amyres_webapp", "static")
+]
 
 
 # Application definition

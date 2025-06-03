@@ -1,69 +1,321 @@
-<!-- amyres_webapp/templates/amyres_webapp/home.html -->
+{% extends 'amyres_webapp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AGReFIND</title>
-    <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
-</head>
-<body>
 
-    <!-- Header Section -->
-    <header>
-        <h1> <strong>AGReFIND: Bridging the Gap Between Agricultural Research and Farmers.</strong></h1>
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="#">About Us</a>
-                    <ul class="dropdown">
-                        <li><a href="{% url 'background' %}">Background</a></li>
-                        <li><a href="{% url 'about' %}">What We Do</a></li>
-                        <li><a href="{% url 'team' %}">The Team</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'products' %}">Products</a>
-                    <ul class="dropdown">
-                        <li><a href="#AGReFIND">AGReFIND</a></li>
-                        <li><a href="#Auditass">Auditass</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'services' %} ">Services</a>
-                    <ul class="dropdown">
-                        <li><a href="#field-trials">Field trials</a></li>
-                        <li><a href="#Market-research">Market research</a></li>
-                        <li><a href="#Literature-Reviewng">Training Needs Assessment</a></li> 
-                        <li><a href="#Agri-Data-Management">Data management</a></li> 
-                        <li><a href="#app-development">App development</a></li>
-                        <li><a href="#Feed-efficiency">Consultancy</a></li>
-                        <li><a href="#FAQ">FAQ</a></li>                      
-                    </ul>
-                </li>
-                <li><a href="{% url 'news' %}">News/Updates</a>
-                    <ul class="dropdown">
-                        <li><a href="#Recent-projects">Projects& activities</a></li>
-                        <li><a href="#Featured-service">Featured service</a></li>
-                        <li><a href="#Industry-insights">Industry insights</a></li> 
-                     
-                    </ul>
-                </li>
-                <li><a href="{% url 'contact' %}">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Body Section -->
-        <div class="homepage">
-            <h1>We're Launching Soon!</h1>
-            <p>Our app is in development.Stay tuned for updates and thank you for your patience!</p>
-            <img src="{% static 'amyres_webapp/Images/App development.jpg' %}" alt="App Testing and Development">
+{% block title %}AGReFIND - Coming Soon{% endblock %}
+
+{% block page_title %}AGReFIND: Coming Soon{% endblock %}
+{% block page_subtitle %}Bridging the Gap Between Agricultural Research and Farmers{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <div class="app-development-page">
+        <div class="development-container">
+            <div class="development-card">
+                <div class="app-icon-section">
+                    <img src="{% static 'amyres_webapp/Images/AGReFIND Icon.PNG' %}" alt="AGReFIND App Icon" class="app-icon-large">
+                </div>
+
+                <div class="development-content">
+                    <h1>We're Launching Soon!</h1>
+                    <p class="launch-message">Our AGReFIND app is currently in development. We're working hard to bring you the best agricultural research platform.</p>
+
+                    <div class="development-features">
+                        <div class="feature-item">
+                            <i class="fas fa-code"></i>
+                            <span>Advanced Development</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Optimization</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-database"></i>
+                            <span>Research Database</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="development-image">
+                        <img src="{% static 'amyres_webapp/Images/App development.jpg' %}" alt="App Testing and Development" class="dev-image">
+                    </div>
+
+                    <div class="notify-section">
+                        <h3>Stay Updated</h3>
+                        <p>Be the first to know when AGReFIND launches!</p>
+                        <form class="notify-form">
+                            <input type="email" placeholder="Enter your email address" class="notify-input" required>
+                            <button type="submit" class="notify-button">Notify Me</button>
+                        </form>
+                    </div>
+
+                    <div class="back-actions">
+                        <a href="{% url 'products' %}" class="cta-button secondary">
+                            <i class="fas fa-arrow-left"></i> Back to Products
+                        </a>
+                        <a href="{% url 'home' %}" class="cta-button primary">
+                            <i class="fas fa-home"></i> Go Home
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    <script src="{% static 'amyres_webapp/js/amyres.js' %}"></script>
-    <footer>
-        <p>&copy; 2025 AMYRES : Research,Innovation and Consultancy. All Rights Reserved.</p>
-        <p>Phone: +254-796-544-7066 | Email: info@amyres.co.ke</p>
-    </footer>
-</body>
-</html>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.app-development-page {
+    background: linear-gradient(to right, #0097b2, #7ed957);
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.development-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.development-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: clamp(30px, 5vw, 50px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.app-icon-section {
+    margin-bottom: 30px;
+}
+
+.app-icon-large {
+    width: clamp(100px, 15vw, 150px);
+    height: clamp(100px, 15vw, 150px);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.app-icon-large:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.development-content h1 {
+    color: #004aad;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.launch-message {
+    color: #666;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.development-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(0, 74, 173, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 74, 173, 0.1);
+}
+
+.feature-item i {
+    color: #004aad;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 5px;
+}
+
+.feature-item span {
+    color: #333;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.development-image {
+    margin: 30px 0;
+}
+
+.dev-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.notify-section {
+    background: rgba(0, 74, 173, 0.05);
+    border-radius: 15px;
+    padding: clamp(20px, 4vw, 30px);
+    margin: 30px 0;
+}
+
+.notify-section h3 {
+    color: #004aad;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.notify-section p {
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.notify-form {
+    display: flex;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.notify-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.notify-input:focus {
+    border-color: #004aad;
+    outline: none;
+}
+
+.notify-button {
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #004aad, #0097b2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.notify-button:hover {
+    background: linear-gradient(45deg, #0097b2, #7ed957);
+    transform: translateY(-2px);
+}
+
+.back-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.back-actions .cta-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    min-width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767.98px) {
+    .app-development-page {
+        padding: 15px;
+    }
+
+    .development-card {
+        padding: 25px;
+    }
+
+    .development-features {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .feature-item {
+        padding: 15px;
+    }
+
+    .notify-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .notify-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .back-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-actions .cta-button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .development-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .feature-item {
+        padding: 12px;
+    }
+
+    .feature-item span {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .development-card {
+        padding: 20px;
+    }
+
+    .development-features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+</style>
+{% endblock %}

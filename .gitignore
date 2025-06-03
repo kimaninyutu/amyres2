@@ -42,3 +42,6 @@ node_modules/
 # SASS / LESS cache
 .sass-cache/
 *.css.map
+
+venv/
+.venv/

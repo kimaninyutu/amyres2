@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.home_view, name='home'),
     path('background/', views.background_view, name='background'),
     path('about/', views.about_view, name='about'),
+    path('about-us/', views.about_us_view, name='about_us'),  # New combined about us page
     path('team/', views.team_view, name='team'),
     path('news/', views.news_view, name='news'),
     path('products/', views.products_view, name='products'),
