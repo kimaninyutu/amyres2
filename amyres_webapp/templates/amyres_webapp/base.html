@@ -148,21 +148,21 @@
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <span class="contact-label">Address</span>
-                                    <span class="contact-value">Nyeri, Kenya</span>
+                                    <a href="https://maps.google.com/?q=Nyeri,Kenya" class="contact-value" target="_blank" rel="noopener noreferrer" aria-label="Open location in Google Maps">Nyeri, Kenya</a>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <div>
                                     <span class="contact-label">Phone</span>
-                                    <span class="contact-value">+254-769-125-073</span>
+                                    <a href="tel:+254769125073" class="contact-value" aria-label="Call us at +254-769-125-073">+254-769-125-073</a>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <div>
                                     <span class="contact-label">Email</span>
-                                    <span class="contact-value">info@amyres.co.ke</span>
+                                    <a href="mailto:info@amyres.co.ke" class="contact-value" aria-label="Send email to info@amyres.co.ke">info@amyres.co.ke</a>
                                 </div>
                             </div>
                         </div>
@@ -171,11 +171,64 @@
                         <div class="social-section">
                             <h5>Follow Us</h5>
                             <div class="social-links">
-                                <a href="#" class="social-link facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social-link twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-link linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-link instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-link youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="https://facebook.com/amyresagtech" class="social-link facebook" aria-label="Follow us on Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://twitter.com/amyresagtech" class="social-link twitter" aria-label="Follow us on Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/amyresagtech/" class="social-link linkedin" aria-label="Follow us on LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://instagram.com/amyresagtech" class="social-link instagram" aria-label="Follow us on Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://youtube.com/@amyresagtech" class="social-link youtube" aria-label="Subscribe to our YouTube channel" title="YouTube" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+{#                                <a href="https://tiktok.com/@amyresagtech" class="social-link tiktok" aria-label="Follow us on TikTok" title="TikTok" target="_blank" rel="noopener noreferrer">#}
+{#                                    <i class="fab fa-tiktok"></i>#}
+{#                                </a>#}
+{#                                <a href="https://wa.me/254769125073" class="social-link whatsapp" aria-label="Contact us on WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer">#}
+{#                                    <i class="fab fa-whatsapp"></i>#}
+{#                                </a>#}
+{#                                <a href="https://t.me/amyresagtech" class="social-link telegram" aria-label="Join us on Telegram" title="Telegram" target="_blank" rel="noopener noreferrer">#}
+{#                                    <i class="fab fa-telegram-plane"></i>#}
+{#                                </a>#}
+{#                                <a href="https://github.com/amyresagtech" class="social-link github" aria-label="Follow us on GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">#}
+{#                                    <i class="fab fa-github"></i>#}
+{#                                </a>#}
+{#                                <a href="https://discord.gg/amyresagtech" class="social-link discord" aria-label="Join our Discord server" title="Discord" target="_blank" rel="noopener noreferrer">#}
+{#                                    <i class="fab fa-discord"></i>#}
+{#                                </a>#}
+{#                                <a href="https://reddit.com/u/amyresagtech" class="social-link reddit" aria-label="Follow us on Reddit" title="Reddit" target="_blank" rel="noopener noreferrer">#}
+{#                                    <i class="fab fa-reddit-alien"></i>#}
+{#                                </a>#}
+{#                                <a href="https://pinterest.com/amyresagtech" class="social-link pinterest" aria-label="Follow us on Pinterest" title="Pinterest" target="_blank" rel="noopener noreferrer">#}
+{#                                    <i class="fab fa-pinterest-p"></i>#}
+{#                                </a>#}
+                            </div>
+
+                            <!-- Social Media Sharing Buttons -->
+                            <div class="social-sharing">
+                                <h6>Share Our Website</h6>
+                                <div class="sharing-buttons">
+                                    <button class="share-btn facebook-share" onclick="shareOnFacebook()" aria-label="Share on Facebook" title="Share on Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </button>
+                                    <button class="share-btn twitter-share" onclick="shareOnTwitter()" aria-label="Share on Twitter" title="Share on Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                    <button class="share-btn linkedin-share" onclick="shareOnLinkedIn()" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </button>
+                                    <button class="share-btn whatsapp-share" onclick="shareOnWhatsApp()" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </button>
+                                    <button class="share-btn telegram-share" onclick="shareOnTelegram()" aria-label="Share on Telegram" title="Share on Telegram">
+                                        <i class="fab fa-telegram-plane"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
