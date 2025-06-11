@@ -1675,74 +1675,231 @@ footer {
   margin-top: 25px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
 }
 
 .social-sharing h6 {
-  font-size: 0.9rem;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  margin-bottom: 15px;
   color: #7ed957;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .sharing-buttons {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .share-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   border: none;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+.share-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.share-btn:hover::before {
+  left: 100%;
+}
+
+/* Individual Share Button Colors */
 .share-btn.facebook-share {
   background: linear-gradient(135deg, #3b5998, #4267b2);
+}
+
+.share-btn.facebook-share:hover {
+  background: linear-gradient(135deg, #4267b2, #5578c4);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(66, 103, 178, 0.4);
 }
 
 .share-btn.twitter-share {
   background: linear-gradient(135deg, #1da1f2, #0d8bd9);
 }
 
+.share-btn.twitter-share:hover {
+  background: linear-gradient(135deg, #0d8bd9, #1991db);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(29, 161, 242, 0.4);
+}
+
 .share-btn.linkedin-share {
   background: linear-gradient(135deg, #0077b5, #005885);
+}
+
+.share-btn.linkedin-share:hover {
+  background: linear-gradient(135deg, #005885, #006fa6);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
 }
 
 .share-btn.whatsapp-share {
   background: linear-gradient(135deg, #25d366, #128c7e);
 }
 
+.share-btn.whatsapp-share:hover {
+  background: linear-gradient(135deg, #128c7e, #25d366);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
 .share-btn.telegram-share {
   background: linear-gradient(135deg, #0088cc, #229ed9);
 }
 
+.share-btn.telegram-share:hover {
+  background: linear-gradient(135deg, #229ed9, #0088cc);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
+}
+
+/* Enhanced Hover Effects */
 .share-btn:hover {
-  transform: translateY(-2px) scale(1.08);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .share-btn:active {
-  transform: translateY(-1px) scale(1.03);
+  transform: translateY(-1px) scale(1.05);
 }
 
 .share-btn:focus {
   outline: 2px solid #7ed957;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
+
+.share-btn i {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.share-btn:hover i {
+  transform: scale(1.2) rotate(-5deg);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Pulse Animation for Share Buttons */
+@keyframes sharePulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.share-btn {
+  animation: sharePulse 4s ease-in-out infinite;
+}
+
+.share-btn:nth-child(1) {
+  animation-delay: 0s;
+}
+.share-btn:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.share-btn:nth-child(3) {
+  animation-delay: 1.6s;
+}
+.share-btn:nth-child(4) {
+  animation-delay: 2.4s;
+}
+.share-btn:nth-child(5) {
+  animation-delay: 3.2s;
+}
+
+/* Mobile Responsive Adjustments for Share Buttons */
+@media (max-width: 575.98px) {
+  .sharing-buttons {
+    gap: 10px;
+  }
+
+  .share-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .social-sharing h6 {
+    font-size: 0.9rem;
+  }
+
+  .social-sharing {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .share-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+  }
+}
+
+/* High Contrast Mode Support for Share Buttons */
+@media (prefers-contrast: high) {
+  .share-btn {
+    border: 3px solid #ffffff;
+  }
+
+  .social-sharing h6 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+/* Reduced Motion Support for Share Buttons */
+@media (prefers-reduced-motion: reduce) {
+  .share-btn {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .share-btn:hover {
+    transform: none !important;
+  }
+
+  .share-btn::before {
+    transition: none !important;
+  }
+}
+/* End of Social Sharing Section */
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 575.98px) {
