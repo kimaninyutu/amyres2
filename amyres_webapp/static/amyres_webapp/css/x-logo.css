@@ -1,0 +1,28 @@
+/* X Logo Styling */
+.x-logo {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #1da1f2;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Adjust size for social links */
+.social-link .x-logo {
+  width: 20px;
+  height: 20px;
+}
+
+/* Adjust size for share buttons */
+.share-btn .x-logo {
+  width: 16px;
+  height: 16px;
+}
+
+/* For high contrast mode */
+@media (prefers-contrast: high) {
+  .x-logo {
+    border: 2px solid #ffffff;
+  }
+}
