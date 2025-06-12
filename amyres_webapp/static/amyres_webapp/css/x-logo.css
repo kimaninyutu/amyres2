@@ -3,9 +3,29 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-color: #1da1f2;
+  background-color: #000000;
   border-radius: 50%;
   position: relative;
+}
+
+/* Add X icon inside the circle */
+.x-logo::before,
+.x-logo::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+}
+
+.x-logo::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.x-logo::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* Adjust size for social links */
@@ -14,10 +34,22 @@
   height: 20px;
 }
 
+.social-link .x-logo::before,
+.social-link .x-logo::after {
+  width: 12px;
+  height: 2px;
+}
+
 /* Adjust size for share buttons */
 .share-btn .x-logo {
   width: 16px;
   height: 16px;
+}
+
+.share-btn .x-logo::before,
+.share-btn .x-logo::after {
+  width: 9px;
+  height: 1.5px;
 }
 
 /* For high contrast mode */
