@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}AMYRES{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
+    <link rel="stylesheet" href="{% static 'amyres_webapp/css/x-logo.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     {% block extra_css %}{% endblock %}
@@ -175,8 +176,8 @@
                                 <a href="https://facebook.com/amyresagtech" class="social-link facebook" aria-label="Follow us on Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="https://twitter.com/amyresagtech" class="social-link twitter" aria-label="Follow us on X (formerly Twitter)" title="X (formerly Twitter)" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-x-twitter"></i>
+                                <a href="https://twitter.com/amyresagtech" class="social-link twitter" aria-label="Follow us on X" title="X" target="_blank" rel="noopener noreferrer">
+                                    <span class="x-logo"></span>
                                 </a>
                                 <a href="https://www.linkedin.com/company/amyresagtech/" class="social-link linkedin" aria-label="Follow us on LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-linkedin-in"></i>
@@ -219,8 +220,8 @@
                                     <button class="share-btn facebook-share" onclick="shareOnFacebook()" aria-label="Share on Facebook" title="Share on Facebook">
                                         <i class="fab fa-facebook-f"></i>
                                     </button>
-                                    <button class="share-btn twitter-share" onclick="shareOnTwitter()" aria-label="Share on X (formerly Twitter)" title="Share on X (formerly Twitter)">
-                                        <i class="fa-brands fa-x-twitter"></i>
+                                    <button class="share-btn twitter-share" onclick="shareOnTwitter()" aria-label="Share on X" title="Share on X">
+                                        <span class="x-logo"></span>
                                     </button>
                                     <button class="share-btn linkedin-share" onclick="shareOnLinkedIn()" aria-label="Share on LinkedIn" title="Share on LinkedIn">
                                         <i class="fab fa-linkedin-in"></i>
