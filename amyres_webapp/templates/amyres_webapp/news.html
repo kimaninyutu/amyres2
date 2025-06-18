@@ -11,6 +11,63 @@
     <div class="homepage">
         <!-- Main News Section -->
         <section id="news" class="news-section">
+
+            <!-- NEW: Featured Discovery Call Announcement -->
+            <article class="news-item featured-announcement">
+                <div class="news-header">
+                    <h2>🚀 NEW: FREE Complimentary Discovery Call Available!</h2>
+                    <p class="date"><i class="fas fa-calendar"></i> Published on: January 2025</p>
+                    <div class="news-badge">Featured</div>
+                </div>
+
+                <div class="news-content">
+                    <div class="discovery-visual">
+                        <div class="discovery-gif-container">
+                            <img src="{% static 'amyres_webapp/images/discovery-call.gif' %}"
+                                 alt="Book Your Complimentary Discovery Call with AMYRES AGTECH"
+                                 class="discovery-gif"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                            <!-- Fallback content if GIF is not available -->
+                            <div class="discovery-fallback" style="display: none;">
+                                <div class="fallback-content">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <h3>Book Your Discovery Call</h3>
+                                    <p>Get personalized insights for your agricultural operations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-text">
+                        <p><strong>Ready to Transform Your Agricultural Operations?</strong></p>
+                        <p>We're excited to announce that AMYRES AGTECH is now offering <strong>FREE Complimentary Discovery Calls</strong> to help farmers and agribusinesses revolutionize their operations with cutting-edge research and innovative solutions.</p>
+
+                        <div class="announcement-highlights">
+                            <h3>What You'll Get in Your Discovery Call:</h3>
+                            <ul>
+                                <li>✅ Personalized assessment of your agricultural challenges</li>
+                                <li>✅ Expert insights on sustainable farming practices</li>
+                                <li>✅ Customized recommendations for your specific needs</li>
+                                <li>✅ Introduction to our innovative AgTech solutions</li>
+                                <li>✅ No obligation - completely FREE consultation</li>
+                            </ul>
+                        </div>
+
+                        <div class="call-to-action-news">
+                            <a href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
+                               class="cta-button discovery-cta"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                📅 Book Your FREE Discovery Call Now
+                            </a>
+                            <p class="limited-offer">Limited slots available - Book today!</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Existing News Items -->
             <article id="Recent-projects" class="news-item">
                 <div class="news-header">
                     <h2>Recent Projects and Activities</h2>
@@ -150,6 +207,156 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* NEW: Featured Discovery Call Styles */
+.featured-announcement {
+    background: linear-gradient(135deg, rgba(0, 74, 173, 0.1), rgba(126, 217, 87, 0.1));
+    border: 2px solid #7ed957;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-announcement::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(126, 217, 87, 0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.news-badge {
+    background: linear-gradient(45deg, #7ed957, #5cb85c);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.announcement-highlights {
+    background: rgba(0, 74, 173, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #004aad;
+}
+
+.announcement-highlights h3 {
+    color: #004aad;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.announcement-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.announcement-highlights li {
+    padding: 8px 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.call-to-action-news {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(126, 217, 87, 0.1);
+    border-radius: 15px;
+}
+
+.discovery-cta {
+    background: linear-gradient(45deg, #7ed957, #5cb85c) !important;
+    color: white !important;
+    padding: 15px 30px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 6px 20px rgba(126, 217, 87, 0.3) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+.discovery-cta:hover {
+    background: linear-gradient(45deg, #5cb85c, #4cae4c) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(126, 217, 87, 0.4) !important;
+}
+
+.limited-offer {
+    color: #e65100;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.discovery-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discovery-gif-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.discovery-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.discovery-fallback {
+    background: rgba(0, 74, 173, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.discovery-fallback i {
+    font-size: 3rem;
+    color: #004aad;
+    margin-bottom: 20px;
+}
+
+.discovery-fallback h3 {
+    color: #004aad;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.discovery-fallback p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
 @media (max-width: 767.98px) {
     .news-content {
         grid-template-columns: 1fr;
@@ -158,6 +365,19 @@
 
     .news-item {
         padding: 20px;
+    }
+
+    .call-to-action-news {
+        padding: 20px;
+    }
+
+    .discovery-cta {
+        padding: 12px 25px !important;
+        font-size: 1rem !important;
+    }
+
+    .announcement-highlights {
+        padding: 15px;
     }
 }
 </style>
