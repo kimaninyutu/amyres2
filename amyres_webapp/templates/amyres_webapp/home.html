@@ -5,6 +5,7 @@
 
 {% block content %}
 <div class="homepage">
+    <!-- Original Carousel Section (First) -->
     <div class="carousel-section">
         <div class="carousel">
             <div class="carousel-item">
@@ -20,5 +21,233 @@
         <button class="carousel-control left" onclick="moveSlide(-1)">&#10094;</button>
         <button class="carousel-control right" onclick="moveSlide(1)">&#10095;</button>
     </div>
+
+    <!-- Discovery Call Hero Section (Second) -->
+    <div class="discovery-call-section">
+        <div class="discovery-content">
+            <div class="discovery-text">
+                <h2>🚀 Ready to Transform Your Agricultural Operations?</h2>
+                <p>Join us for a <strong>FREE Complimentary Discovery Call</strong> and discover how AMYRES AGTECH can revolutionize your farming practices with cutting-edge research and innovative solutions.</p>
+                
+                <div class="discovery-benefits">
+                    <h3>What You'll Get:</h3>
+                    <ul>
+                        <li>✅ Personalized assessment of your agricultural challenges</li>
+                        <li>✅ Expert insights on sustainable farming practices</li>
+                        <li>✅ Customized recommendations for your specific needs</li>
+                        <li>✅ Introduction to our innovative AgTech solutions</li>
+                        <li>✅ No obligation - completely FREE consultation</li>
+                    </ul>
+                </div>
+
+                <div class="discovery-cta">
+                    <a href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech" 
+                       class="cta-button discovery-btn" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        📅 Book Your FREE Discovery Call Now
+                    </a>
+                    <p class="discovery-note">Limited slots available - Book today!</p>
+                </div>
+            </div>
+
+            <div class="discovery-visual">
+                <!-- Placeholder for GIF - will be updated when GIF is provided -->
+                <div class="discovery-gif-container">
+                    <img src="{% static 'amyres_webapp/images/discovery-call.gif' %}" 
+                         alt="Book Your Complimentary Discovery Call with AMYRES AGTECH" 
+                         class="discovery-gif"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    
+                    <!-- Fallback content if GIF is not available -->
+                    <div class="discovery-fallback" style="display: none;">
+                        <div class="fallback-content">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Book Your Discovery Call</h3>
+                            <p>Get personalized insights for your agricultural operations</p>
+                            <a href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech" 
+                               class="cta-button" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                Schedule Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Additional CSS for Discovery Call Section -->
+<style>
+.discovery-call-section {
+    background: linear-gradient(135deg, rgba(0, 74, 173, 0.95), rgba(0, 151, 178, 0.95));
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.discovery-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.discovery-text h2 {
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.discovery-text p {
+    color: #f0f8ff;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.discovery-benefits {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.discovery-benefits h3 {
+    color: #7ed957;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.discovery-benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.discovery-benefits li {
+    color: #ffffff;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.discovery-cta {
+    text-align: center;
+}
+
+.discovery-btn {
+    background: linear-gradient(45deg, #7ed957, #5cb85c);
+    color: white;
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(126, 217, 87, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.discovery-btn:hover {
+    background: linear-gradient(45deg, #5cb85c, #4cae4c);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(126, 217, 87, 0.4);
+}
+
+.discovery-note {
+    color: #ffeb3b;
+    font-size: 1rem;
+    margin-top: 15px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.discovery-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discovery-gif-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.discovery-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.discovery-fallback {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.fallback-content i {
+    font-size: 3rem;
+    color: #7ed957;
+    margin-bottom: 20px;
+}
+
+.fallback-content h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.fallback-content p {
+    color: #f0f8ff;
+    margin-bottom: 25px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .discovery-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .discovery-call-section {
+        padding: 40px 15px;
+    }
+    
+    .discovery-benefits {
+        padding: 20px;
+    }
+    
+    .discovery-btn {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .discovery-call-section {
+        padding: 30px 10px;
+        margin-bottom: 20px;
+    }
+    
+    .discovery-benefits li {
+        font-size: 1rem;
+    }
+}
+</style>
 {% endblock %}
