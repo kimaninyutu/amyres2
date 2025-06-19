@@ -8,7 +8,6 @@
     <title>{% block title %}AMYRES{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'amyres_webapp/css/amyres.css' %}">
     <link rel="stylesheet" href="{% static 'amyres_webapp/css/x-logo.css' %}">
-    <link rel="stylesheet" href="{% static 'amyres_webapp/css/newsletter-styles.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     {% block extra_css %}{% endblock %}
@@ -25,8 +24,8 @@
                 <!-- Header content on the right -->
                 <div class="header-content">
                     <div class="header-text">
-                        <h1>{% block page_title %}AMYRES AGTECH: Your Research, Innovation and Development Partner{% endblock %}</h1>
-                        <p>{% block page_subtitle %}"Powering insightful innovations for sustainable agriculture"{% endblock %}</p>
+                        <h1>{% block page_title %}AMYRES AGTECH{% endblock %}</h1>
+                        <p class="tagline-spotlight">{% block page_subtitle %}"We don't just deliver AgTech, we build it with you, for you"{% endblock %}</p>
                     </div>
 
                     <!-- Navigation Menu -->
@@ -44,7 +43,6 @@
                                 <ul class="dropdown">
                                     <li><a href="{% url 'about_us' %}#background">Background</a></li>
                                     <li><a href="{% url 'about_us' %}#what-we-do">What We Do</a></li>
-{#                                    <li><a href="{% url 'about_us' %}#team">The Team</a></li>#}
                                 </ul>
                             </li>
                             <li><a href="{% url 'products' %}"><i class="fas fa-box"></i> Products <i class="fas fa-chevron-down dropdown-icon"></i></a>
@@ -104,7 +102,7 @@
                             <img src="{% static 'amyres_webapp/images/amyres-logo.png' %}" alt="AMYRES AGTECH Logo" class="footer-logo-img">
                             <div class="footer-brand">
                                 <h3>AMYRES AGTECH</h3>
-                                <div class="footer-tagline">Research • Innovation • Consultancy</div>
+                                <div class="footer-tagline">We don't just deliver AgTech, we build it with you, for you</div>
                             </div>
                         </div>
                         <p class="company-description">Leading agricultural innovation through research, technology, and sustainable practices. Empowering farmers and agribusinesses with data-driven solutions for a sustainable future.</p>
@@ -113,12 +111,8 @@
                         <div class="newsletter-section">
                             <h4><i class="fas fa-envelope"></i> Stay Updated</h4>
                             <form class="newsletter-form">
-                                <div class="newsletter-input-wrapper">
-                                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-                                </div>
-                                <button type="submit" class="newsletter-btn">
-                                    <i class="fas fa-paper-plane"></i> Subscribe
-                                </button>
+                                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                                <button type="submit" class="newsletter-btn">Subscribe</button>
                             </form>
                         </div>
                     </div>
@@ -217,7 +211,7 @@
                                 </a>
                                 -->
                             </div>
-
+                            
                             <!-- Social Media Sharing Buttons -->
                             <div class="social-sharing">
                                 <h6>Share Our Website</h6>
@@ -248,7 +242,7 @@
                     <div class="footer-bottom-content">
                         <div class="copyright">
                             <p>&copy; 2025 AMYRES AGTECH. All Rights Reserved.</p>
-                            <p class="subtitle">Research • Innovation • Consultancy</p>
+                            <p class="subtitle">We don't just deliver AgTech, we build it with you, for you</p>
                         </div>
                         <div class="footer-bottom-links">
                             <a href="#">Privacy Policy</a>
