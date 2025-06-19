@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Social Media Sharing Functions
 function shareOnFacebook() {
   const url = encodeURIComponent(window.location.href)
-  const title = encodeURIComponent("AMYRES AGTECH - Your Research, Innovation and Development Partner")
+  const title = encodeURIComponent("AMYRES AGTECH - Powering insightful innovations for sustainable agriculture")
   const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${title}`
   openShareWindow(shareUrl, "Facebook")
 }
@@ -29,7 +29,7 @@ function shareOnFacebook() {
 function shareOnTwitter() {
   const url = encodeURIComponent(window.location.href)
   const text = encodeURIComponent(
-    "Check out AMYRES AGTECH - Powering insightful innovations for sustainable agriculture.",
+    "Check out AMYRES AGTECH - Powering insightful innovations for sustainable agriculture. We don't just deliver AgTech, we build it with you, for you.",
   )
   const shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}&hashtags=AgTech,Kenya,Agriculture,Innovation`
   openShareWindow(shareUrl, "Twitter")
@@ -37,8 +37,8 @@ function shareOnTwitter() {
 
 function shareOnLinkedIn() {
   const url = encodeURIComponent(window.location.href)
-  const title = encodeURIComponent("AMYRES AGTECH - Agricultural Innovation Through Research")
-  const summary = encodeURIComponent("Powering insightful innovations for sustainable agriculture.")
+  const title = encodeURIComponent("AMYRES AGTECH - Powering insightful innovations for sustainable agriculture")
+  const summary = encodeURIComponent("We don't just deliver AgTech, we build it with you, for you.")
   const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`
   openShareWindow(shareUrl, "LinkedIn")
 }
@@ -46,7 +46,7 @@ function shareOnLinkedIn() {
 function shareOnWhatsApp() {
   const url = encodeURIComponent(window.location.href)
   const text = encodeURIComponent(
-    "Check out AMYRES AGTECH - Your Research, Innovation and Development Partner for Sustainable Agriculture: ",
+    "Check out AMYRES AGTECH - Powering insightful innovations for sustainable agriculture. We don't just deliver AgTech, we build it with you, for you: ",
   )
   const shareUrl = `https://wa.me/?text=${text}${url}`
   openShareWindow(shareUrl, "WhatsApp")
@@ -55,7 +55,7 @@ function shareOnWhatsApp() {
 function shareOnTelegram() {
   const url = encodeURIComponent(window.location.href)
   const text = encodeURIComponent(
-    "Check out AMYRES AGTECH - Your Research, Innovation and Development Partner for Sustainable Agriculture: ",
+    "Check out AMYRES AGTECH - Powering insightful innovations for sustainable agriculture. We don't just deliver AgTech, we build it with you, for you: ",
   )
   const shareUrl = `https://t.me/share/url?url=${url}&text=${text}`
   openShareWindow(shareUrl, "Telegram")
