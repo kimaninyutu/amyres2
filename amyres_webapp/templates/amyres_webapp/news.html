@@ -11,7 +11,7 @@
     <div class="homepage">
         <!-- Main News Section -->
         <section id="news" class="news-section">
-
+            
             <!-- NEW: Featured Discovery Call Announcement -->
             <article class="news-item featured-announcement">
                 <div class="news-header">
@@ -22,27 +22,18 @@
 
                 <div class="news-content">
                     <div class="discovery-visual">
-                        <div class="discovery-gif-container">
-                            <img src="{% static 'amyres_webapp/images/discovery-call.gif' %}"
-                                 alt="Book Your Complimentary Discovery Call with AMYRES AGTECH"
-                                 class="discovery-gif"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-
-                            <!-- Fallback content if GIF is not available -->
-                            <div class="discovery-fallback" style="display: none;">
-                                <div class="fallback-content">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <h3>Book Your Discovery Call</h3>
-                                    <p>Get personalized insights for your agricultural operations</p>
-                                </div>
-                            </div>
+                        <div class="discovery-video-container">
+                            <video class="discovery-video" autoplay loop muted playsinline>
+                                <source src="{% static 'amyres_webapp/images/discovery-call.mp4' %}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
 
                     <div class="news-text">
                         <p><strong>Ready to Transform Your Agricultural Operations?</strong></p>
                         <p>We're excited to announce that AMYRES AGTECH is now offering <strong>FREE Complimentary Discovery Calls</strong> to help farmers and agribusinesses revolutionize their operations with cutting-edge research and innovative solutions.</p>
-
+                        
                         <div class="announcement-highlights">
                             <h3>What You'll Get in Your Discovery Call:</h3>
                             <ul>
@@ -55,9 +46,9 @@
                         </div>
 
                         <div class="call-to-action-news">
-                            <a href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech"
-                               class="cta-button discovery-cta"
-                               target="_blank"
+                            <a href="https://calendly.com/aoko-amyres/complimentary-diagnostic-session-with-amyres-agtech" 
+                               class="cta-button discovery-cta" 
+                               target="_blank" 
                                rel="noopener noreferrer">
                                 📅 Book Your FREE Discovery Call Now
                             </a>
@@ -318,43 +309,18 @@
     align-items: center;
 }
 
-.discovery-gif-container {
+.discovery-video-container {
     width: 100%;
     max-width: 400px;
-    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.discovery-gif {
+.discovery-video {
     width: 100%;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.discovery-fallback {
-    background: rgba(0, 74, 173, 0.1);
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-}
-
-.discovery-fallback i {
-    font-size: 3rem;
-    color: #004aad;
-    margin-bottom: 20px;
-}
-
-.discovery-fallback h3 {
-    color: #004aad;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.discovery-fallback p {
-    color: #666;
-    margin-bottom: 25px;
+    display: block;
 }
 
 @media (max-width: 767.98px) {
@@ -366,16 +332,16 @@
     .news-item {
         padding: 20px;
     }
-
+    
     .call-to-action-news {
         padding: 20px;
     }
-
+    
     .discovery-cta {
         padding: 12px 25px !important;
         font-size: 1rem !important;
     }
-
+    
     .announcement-highlights {
         padding: 15px;
     }
